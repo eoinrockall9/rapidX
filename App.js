@@ -15,6 +15,14 @@ import Exercises from './src/screens/Exercises';
 import Profile from './src/screens/Profile';
 import Settings from './src/screens/Settings';
 import CalendarScreen from './src/screens/CalendarScreen';
+import DynamicStretch from './src/screens/Exercise/DynamicStretch';
+import Foamroll from './src/screens/Exercise/Foamroll';
+import LongDistance from './src/screens/Exercise/Long-Distance';
+import Sprint from './src/screens/Exercise/Sprint';
+import Static from './src/screens/Exercise/StaticStretch';
+import Warmup from './src/screens/Exercise/Warmup';
+import Motivation from './src/screens/Motivation';
+import Stopwatch from './src/screens/Stopwatch';
 
 const AppNavigator = createStackNavigator(
   {
@@ -30,6 +38,14 @@ const AppNavigator = createStackNavigator(
     Settings,
     Profile,
     CalendarScreen,
+    DynamicStretch,
+    Foamroll,
+    LongDistance,
+    Sprint,
+    Static,
+    Warmup,
+    Motivation,
+    Stopwatch
   },
   {
     initialRouteName: 'Home'

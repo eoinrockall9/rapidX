@@ -46,7 +46,7 @@ export default class CalendarScreen extends React.Component {
         />
       </View>
       <View>
-        <Text>HONEY HONEY HONEY</Text>
+        
       </View>
       </React.Fragment>
     )

@@ -3,6 +3,16 @@ import { Dimensions, View, Text, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { Button } from 'native-base'
 
+import { db } from '../config';
+
+let removeItem = item => {
+  // db.ref('/items').remove({
+  //   name: item
+  // });
+
+  alert("You pressed the button")
+};
+
 screenWidth = Math.round(Dimensions.get('window').width);
 buttonWidth = 75;
 textboxWidth = screenWidth - buttonWidth;
@@ -19,7 +29,9 @@ export default class ItemComponent extends Component {
           return (
             <View key={index} style={styles.itemRow}>
               <Text style={styles.itemtext}>{item.name}</Text>
-              <Button danger style={styles.deleteButton}></Button>
+              <Button success style={styles.deleteButton} onPress={this.removeItem}>
+                <Text style={styles.doneTxt}>Done</Text>
+              </Button>
             </View>
           );
         })}
@@ -43,10 +55,18 @@ const styles = StyleSheet.create({
   },
   itemRow: {
     flexDirection: 'row',
+    paddingTop: 5,
+    paddingBottom: 10,
     
   },
   deleteButton: {
     width: buttonWidth,
     justifyContent: 'flex-end'
+  },
+  doneTxt: {
+    color: 'white',
+    textAlignVertical: 'center',
+    //justifyContent: 'space-evenly'
+    
   }
 });

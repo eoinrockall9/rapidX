@@ -1,23 +1,48 @@
-import React from 'react'
-import { View, Text, ActivityIndicator, StyleSheet } from 'react-native'
+import React, { Component } from 'react';
+import { View, TextInput } from 'react-native';
+import { Button } from 'native-base';
 
-// import firebase from 'react-native-firebase';
+trueORfalse = false;
 
-export default class Loading extends React.Component {
-  
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>WELCOME TO</Text>
-        <ActivityIndicator size='small' />
-      </View>
-    )
-  }
+function UselessTextInput(props) {
+  return (
+    <TextInput
+      {...props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
+      editable={trueORfalse}
+      maxLength={40}
+    />
+  );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
-})
+
+switchEdit = () => {
+  trueORfalse = !trueORfalse
+  this.restartGame.bind()
+  
+};
+
+restartGame = () => {
+  this.setState({ });
+};
+
+export default function UselessTextInputMultiline() {
+  const [value, onChangeText] = React.useState('Useless Multiline Placeholder');
+
+  // If you type something in the text box that is a color, the background will change to that
+  // color.
+  return (
+    <View
+      style={{
+        backgroundColor: value,
+        borderBottomColor: '#000000',
+        borderBottomWidth: 1,
+      }}>
+      <UselessTextInput
+        multiline
+        numberOfLines={4}
+        onChangeText={text => onChangeText(text)}
+        value={value}
+      />
+      <Button onPress={this.switchEdit.bind()}></Button>
+    </View>
+  );
+}

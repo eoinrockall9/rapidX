@@ -7,12 +7,30 @@ import { db } from '../config';
 
 let itemsRef = db.ref('/runs/10');
 
-export default class Settings extends Component {
+export default class RecentRuns extends Component {
+  state = {
+    items: []
+    
+  };
+
+
+  componentDidMount() {
+    itemsRef.on('value', snapshot => {
+      let data = snapshot.val();
+      let items = Object.values(data);
+      this.setState({ items });
+    });
+  }
 
   render() {
     return (
       <View style={styles.container}>
         
+        {this.state.items.length > 0 ? (
+          <ItemComponent items={this.state.items} />
+        ) : (
+          <Text>No items</Text>
+        )}
         
       </View>
     );

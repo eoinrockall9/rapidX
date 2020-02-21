@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyleSheet, TouchableOpacity } from 'react-native'
 import { Content, Card, CardItem, Text, Body } from 'native-base'
 
 const IntroTextBox = (props) => {

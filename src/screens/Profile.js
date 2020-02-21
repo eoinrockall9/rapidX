@@ -1,48 +1,53 @@
 import React, { Component } from 'react';
-import { View, TextInput } from 'react-native';
-import { Button } from 'native-base';
+import { View, Text, StyleSheet, ActivityIndicator, ScrollView } from 'react-native';
+import { Card, CardItem, Body } from 'native-base'
+import ItemComponent from '../components/ItemComponent';
+import { Image } from 'react-native-elements';
+import { IntroTextBox } from '../components/IntroductionTextBox';
 
-trueORfalse = false;
+import { db } from '../config';
 
-function UselessTextInput(props) {
-  return (
-    <TextInput
-      {...props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
-      editable={trueORfalse}
-      maxLength={40}
-    />
-  );
+
+export default class Settings extends Component {
+
+  render() {
+    return (
+      <React.Fragment>
+      <ScrollView >
+          <View style={styles.imageContainer}>
+            <Image
+              source={{ uri: 'https://www.pngkey.com/png/detail/202-2022332_formacin-usuario-remota-profile-icon-vector.png', }}
+              style={{ width: 200, height: 200 }}
+              PlaceholderContent={<ActivityIndicator />}
+            />
+          </View>
+          <View style={styles.textContainer}>
+            
+            <IntroTextBox message="Name"></IntroTextBox>
+            <IntroTextBox message="Birthplace"></IntroTextBox>
+            <IntroTextBox message="Age"></IntroTextBox>
+          </View>
+          
+
+        
+      </ScrollView>
+      </React.Fragment>
+    );
+  }
 }
 
-switchEdit = () => {
-  trueORfalse = !trueORfalse
-  this.restartGame.bind()
+const styles = StyleSheet.create({
   
-};
+  imageContainer: {
+    flex: 3,
+    justifyContent: 'center',
+    backgroundColor: '#e6e6e6',
+    alignItems: 'center'
+  },
+  textContainer: {
+    flex: 4,
+    justifyContent: 'center',
+    backgroundColor: '#bfbfbf'
+  },
 
-restartGame = () => {
-  this.setState({ });
-};
-
-export default function UselessTextInputMultiline() {
-  const [value, onChangeText] = React.useState('Useless Multiline Placeholder');
-
-  // If you type something in the text box that is a color, the background will change to that
-  // color.
-  return (
-    <View
-      style={{
-        backgroundColor: value,
-        borderBottomColor: '#000000',
-        borderBottomWidth: 1,
-      }}>
-      <UselessTextInput
-        multiline
-        numberOfLines={4}
-        onChangeText={text => onChangeText(text)}
-        value={value}
-      />
-      <Button onPress={this.switchEdit.bind()}></Button>
-    </View>
-  );
-}
+});

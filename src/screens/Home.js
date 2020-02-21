@@ -17,7 +17,7 @@ export default class Home extends Component {
             />
             </React.Fragment>
         </View>
-        <View style={styles.captions}>
+        <View style={styles.captions1}>
           <React.Fragment>
             <Text>Profile</Text>
           </React.Fragment>
@@ -25,22 +25,28 @@ export default class Home extends Component {
 
         <View style={styles.icons}>
           <React.Fragment>
+            <View style={styles.innerView}>
             <Avatar rounded size='xlarge'
                 source={{uri:'https://vectorified.com/images/new-item-icon-4.png', }}
                 onPress={() => this.props.navigation.navigate('AddItem')}
             />
+            <Text>Add to List</Text>
+            </View>
+            <View style={styles.innerView}>
             <Avatar rounded size='xlarge'
                 source={{uri:'https://p7.hiclipart.com/preview/115/685/301/computer-icons-checklist-icon-design-list-vector.jpg', }}
                 onPress={() => this.props.navigation.navigate('List')}
             />
+            <Text>To-Do List</Text>
+            </View>
             </React.Fragment>
         </View>
-        <View style={styles.captions}>
+        {/* <View style={styles.captions2}>
           <React.Fragment>
             <Text>Add to List</Text>
             <Text>To-Do List</Text>
           </React.Fragment>
-        </View>
+        </View> */}
 
         <View style={styles.icons}>
           <React.Fragment>
@@ -54,7 +60,7 @@ export default class Home extends Component {
             />
             </React.Fragment>
         </View>
-        <View style={styles.captions}>
+        <View style={styles.captions2}>
           <React.Fragment>
             <Text>Calendar</Text>
             <Text>Charts</Text>
@@ -73,7 +79,7 @@ export default class Home extends Component {
             />
             </React.Fragment>
         </View>
-        <View style={styles.captions}>
+        <View style={styles.captions2}>
           <React.Fragment>
             <Text>Exercises</Text>
             <Text>Run Tracker</Text>
@@ -96,7 +102,7 @@ export default class Home extends Component {
             />
             </React.Fragment>
         </View>
-        <View style={styles.captions}>
+        <View style={styles.captions3}>
           <React.Fragment>
             <Text>Settings</Text>
             <Text>Stopwatch</Text>
@@ -116,9 +122,23 @@ const styles = StyleSheet.create ({
     flexDirection:'row', 
     justifyContent:'space-evenly'
   },
-  captions: {
+  captions1: {
     paddingBottom: 20, 
     flexDirection:'row', 
     justifyContent:'space-evenly'
+  },
+  captions2: {
+    paddingBottom: 20, 
+    flexDirection:'row', 
+    justifyContent:'space-evenly'
+  },
+  captions3: {
+    paddingBottom: 20, 
+    flexDirection:'row', 
+    justifyContent:'space-evenly'
+  },
+  innerView: {
+    flexDirection: 'column',
+    
   }
 });

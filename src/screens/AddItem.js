@@ -15,12 +15,6 @@ let addItem = item => {
   });
 };
 
-// let removeItem = item => {
-//   db.ref('/items').remove({
-//     name: item
-//   });
-// };
-
 export default class AddItem extends Component {
   state = {
     name: ''

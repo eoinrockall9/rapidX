@@ -5,13 +5,7 @@ import { Button } from 'native-base'
 
 import { db } from '../config';
 
-let removeItem = item => {
-  // db.ref('/items').remove({
-  //   name: item
-  // });
-
-  alert("You pressed the button")
-};
+let itemsRef = db.ref('/items');
 
 screenWidth = Math.round(Dimensions.get('window').width);
 buttonWidth = 75;
@@ -22,6 +16,11 @@ export default class ItemComponent extends Component {
     items: PropTypes.array.isRequired
   };
 
+  handleRemove = (item) => {
+
+    db.ref('/items/-M0qUPNnHRbZAb1R3690/').remove();
+  }
+
   render() {
     return (
       <View style={styles.itemsList}>
@@ -29,7 +28,7 @@ export default class ItemComponent extends Component {
           return (
             <View key={index} style={styles.itemRow}>
               <Text style={styles.itemtext}>{item.name}</Text>
-              <Button success style={styles.deleteButton} onPress={this.removeItem}>
+              <Button success style={styles.deleteButton} onPress={() => this.handleRemove(item.name)}>
                 <Text style={styles.doneTxt}>Done</Text>
               </Button>
             </View>

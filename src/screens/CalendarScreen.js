@@ -9,14 +9,14 @@ var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + dd;
-
+screenHeight = Math.round(Dimensions.get('window').height);
 
 export default class CalendarScreen extends React.Component {
 
   render() {
     return (
       <React.Fragment>
-      <View style={{height: 325}}>
+      <View style={{height: (screenHeight/2.15)}}>
         <CalendarList
           // Callback which gets executed when visible months change in scroll view. Default = undefined
           onVisibleMonthsChange={(months) => {console.log('now these months are visible', months);}}

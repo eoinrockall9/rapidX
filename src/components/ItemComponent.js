@@ -16,9 +16,17 @@ export default class ItemComponent extends Component {
     items: PropTypes.array.isRequired
   };
 
-  handleRemove = (item) => {
+  handleRemove = (index) => {
 
-    db.ref('/items/-M0qUPNnHRbZAb1R3690/').remove();
+    itemsRef.once('value').then((snapshot) => {
+      snapshot.forEach((subSnapshot) => {
+        
+        var key = Object.keys(snapshot.val())[index];
+        let random = itemsRef.child(key)
+        
+        itemsRef.child(key).remove();
+      });
+    });
   }
 
   render() {
@@ -28,7 +36,7 @@ export default class ItemComponent extends Component {
           return (
             <View key={index} style={styles.itemRow}>
               <Text style={styles.itemtext}>{item.name}</Text>
-              <Button success style={styles.deleteButton} onPress={() => this.handleRemove(item.name)}>
+              <Button success style={styles.deleteButton} onPress={() => this.handleRemove(index)}>
                 <Text style={styles.doneTxt}>Done</Text>
               </Button>
             </View>

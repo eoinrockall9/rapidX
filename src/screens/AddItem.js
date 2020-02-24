@@ -4,20 +4,23 @@ import {
   Text,
   TouchableHighlight,
   StyleSheet,
-  TextInput
+  TextInput, Picker
 } from 'react-native';
 
 import { db } from '../config';
 
-let addItem = item => {
-  db.ref('/items').push({
+let addItem = (item, year, month, day) => {
+  db.ref('/dates' + year + '/' + month + '/' + day).push({
     name: item
   });
 };
 
 export default class AddItem extends Component {
   state = {
-    name: ''
+    name: '',
+    year: '',
+    month: '',
+    day: ''
   };
 
   handleChange = e => {
@@ -25,8 +28,24 @@ export default class AddItem extends Component {
       name: e.nativeEvent.text
     });
   };
+  handleChangeDay = e => {
+    this.setState({
+      day: e.nativeEvent.text
+    });
+  };
+  handleChangeMonth = e => {
+    this.setState({
+      month: e.nativeEvent.text
+    });
+  };
+  handleChangeYear = e => {
+    this.setState({
+      year: e.nativeEvent.text
+    });
+  };
+
   handleSubmit = () => {
-    addItem(this.state.name);
+    addItem(this.state.name, this.state.year, this.state.month, this.state.day);
   };
 
   functionsCombo = () => {
@@ -39,6 +58,10 @@ export default class AddItem extends Component {
       <View style={styles.main}>
         <Text style={styles.title}>Add Item</Text>
         <TextInput style={styles.itemInput} onChange={this.handleChange} />
+        <TextInput style={styles.itemInput} onChange={this.handleChangeYear} />
+        <TextInput style={styles.itemInput} onChange={this.handleChangeMonth} />
+        <TextInput style={styles.itemInput} onChange={this.handleChangeDay} />
+        
         <TouchableHighlight
           style={styles.button}
           underlayColor="white"

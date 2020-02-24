@@ -3,11 +3,18 @@ import React from 'react'
 import { Dimensions, View, Text, ActivityIndicator, StyleSheet } from 'react-native'
 import { LineChart } from 'react-native-chart-kit';
 
+import { db } from '../config';
+import { Button } from 'native-base';
+
+let fiveRef = db.ref('/runs/20');
+let tenRef = db.ref('/runs/10');
+
+
 export default class Loading extends React.Component {
-  
 
   render() {
     return (
+      <React.Fragment>
       <View>
   <Text>Bezier Line Chart</Text>
   <LineChart
@@ -31,9 +38,9 @@ export default class Loading extends React.Component {
     yAxisLabel="$"
     yAxisSuffix="k"
     chartConfig={{
-      backgroundColor: "#e26a00",
-      backgroundGradientFrom: "#fb8c00",
-      backgroundGradientTo: "#ffa726",
+      backgroundColor: "white",
+      backgroundGradientFrom: "grey",
+      backgroundGradientTo: "white",
       decimalPlaces: 2, // optional, defaults to 2dp
       color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
       labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
@@ -53,6 +60,10 @@ export default class Loading extends React.Component {
     }}
   />
 </View>
+<View>
+  <Button onPress={this.printing.bind()}/>
+</View>
+</React.Fragment>
     )
   }
 }

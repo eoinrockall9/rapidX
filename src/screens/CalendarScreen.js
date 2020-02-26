@@ -29,7 +29,8 @@ export default class CalendarScreen extends React.Component {
   }
 
   functionsCombo(year, month, day) {
-    this.setItemsRef(year, month, day)
+    this.setItemsRef(year, month, day);
+    this.props.navigation.navigate('CalendarDate', {year: year, month: month, day: day});
   }
 
   componentDidMount() {

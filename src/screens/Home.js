@@ -98,7 +98,7 @@ export default class Home extends Component {
             />
             <Avatar rounded size='large'
                 source={{uri:'https://vectorified.com/images/quote-icon-png-16.png', }}
-                onPress={() => this.props.navigation.navigate('Motivation')}
+                onPress={() => this.props.navigation.navigate('RecentRuns')}
             />
             </React.Fragment>
         </View>

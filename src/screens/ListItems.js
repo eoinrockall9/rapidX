@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableHighlight, StyleSheet, TextInput } from 'react-native';
+import { View, Text, TouchableHighlight, StyleSheet, TextInput, TouchableOpacity, Button } from 'react-native';
 import { List, ListItem } from 'native-base'
 import ItemComponent from '../components/ItemComponent';
 
 import { db } from '../config';
 import { ScrollView } from 'react-native-gesture-handler';
+
+import Dialog from 'react-native-dialog'
 
 let itemsRef = db.ref('/items');
 
@@ -17,7 +19,16 @@ let addItem = item => {
 export default class ListItems extends Component {
   state = {
     item: '',
-    items: []
+    items: [],
+    dialogVisible: false
+  };
+
+  showDialog = () => {
+    this.setState({ dialogVisible: true });
+  };
+ 
+  handleCancel = () => {
+    this.setState({ dialogVisible: false });
   };
 
   handleChange = e => {
@@ -39,12 +50,16 @@ export default class ListItems extends Component {
   functionsCombo = () => {
     this.handleSubmit();
     this.clearText();
+    this.componentDidMount();
+    this.showDialog();
   };
 
   componentDidMount() {
     itemsRef.on('value', snapshot => {
       let data = snapshot.val();
       let items = Object.values(data);
+      let eoin = Object.getOwnPropertySymbols(data)
+      
       this.setState({ items });
     });
   }
@@ -53,17 +68,27 @@ export default class ListItems extends Component {
     return (
       <React.Fragment>
       <ScrollView>
+      <View>
+      <TouchableOpacity onPress={this.showDialog}>
+          <Text>Show Dialog</Text>
+        </TouchableOpacity>
+        <Dialog.Container visible={this.state.dialogVisible}>
+          <Dialog.Title>Add to your Calendar</Dialog.Title>
+          <Dialog.Description>
+            Add in a date to add this to your calendar?
+          </Dialog.Description>
+          <Dialog.Input style={styles.input}>Day</Dialog.Input>
+          <Dialog.Input label="Month" style={styles.input}/>
+          <Dialog.Input label="Year" style={styles.input}/>
+          <Dialog.Button label="Add" />
+          <Dialog.Button label="Cancel" onPress={this.handleCancel} />
+        </Dialog.Container>
+      </View>
       <View style={styles.main}>
         <Text style={styles.title}>Add Item</Text>
         <TextInput style={styles.itemInput} onChange={this.handleChange} />
-        <TouchableHighlight
-          style={styles.button}
-          underlayColor="white"
-          onPress={this.functionsCombo}
+        <Button style={styles.button} onPress={this.functionsCombo} title={"Add"} />
           
-        >
-          <Text style={styles.buttonText}>Add</Text>
-        </TouchableHighlight>
       </View>
       
       <View style={styles.container}>
@@ -87,6 +112,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white'
   }, 
+  input: {
+    justifyContent: 'center', 
+    fontSize: 20
+  },
   main: {
     flex: 0.3,
     padding: 30,

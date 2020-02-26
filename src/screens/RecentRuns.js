@@ -13,14 +13,23 @@ export default class RecentRuns extends Component {
     
   };
 
-
   componentDidMount() {
     itemsRef.on('value', snapshot => {
       let data = snapshot.val();
       let items = Object.values(data);
       this.setState({ items });
+
+      var i = 0;
+      var string = '';
+      for (i = 0; i < items.length; i++)
+      {
+        string += items[i].name
+      }
+      console.log("Fuck off - " + string)
     });
   }
+
+  
 
   render() {
     return (

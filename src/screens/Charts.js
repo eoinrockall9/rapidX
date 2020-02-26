@@ -7,36 +7,64 @@ import { db } from '../config';
 import { Button } from 'native-base';
 
 let fiveRef = db.ref('/runs/20');
-let tenRef = db.ref('/runs/10');
+let itemsRef = db.ref('/runs/10');
 
+export default class Charts extends React.Component {
 
-export default class Loading extends React.Component {
+  
+  state = {
+    items: [],
+    total: []
+    
+  };
+
+  componentDidMount() {
+    itemsRef.on('value', snapshot => {
+      let data = snapshot.val();
+      let items = Object.values(data);
+      this.setState({ items: items });
+
+      var i = 0;
+      var total = [];
+      for (i = 0; i < items.length; i++)
+      {
+        parseInt(items[i].name)
+        total[i] = ''
+        total[i] += items[i].name
+      }
+      
+      this.setState({total})
+      
+      return total;
+    });
+  }
 
   render() {
+
+    array = []
+    array = this.state.total
+    single = array[0]
+    
+    console.log(single)
+    
     return (
+      
       <React.Fragment>
       <View>
-  <Text>Bezier Line Chart</Text>
+        
+    <Text>Bezier Line Chart + {this.state.total}</Text>
   <LineChart
     data={{
-      labels: ["January", "February", "March", "April", "May", "June"],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June'],
       datasets: [
         {
-          data: [
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100
-          ]
-        }
-      ]
+          data: this.state.total,
+        },
+      ],
     }}
     width={Dimensions.get("window").width} // from react-native
     height={220}
-    yAxisLabel="$"
-    yAxisSuffix="k"
+    
     chartConfig={{
       backgroundColor: "white",
       backgroundGradientFrom: "grey",
@@ -60,9 +88,7 @@ export default class Loading extends React.Component {
     }}
   />
 </View>
-<View>
-  <Button onPress={this.printing.bind()}/>
-</View>
+
 </React.Fragment>
     )
   }

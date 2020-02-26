@@ -1,28 +1,33 @@
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { List, ListItem } from 'native-base'
-import ItemComponent from '../components/ItemComponent';
+import React, { Component } from "react";
+import { Container, Header, Content, Card, CardItem, Text, Body } from "native-base";
 
-import { db } from '../config';
 
-let itemsRef = db.ref('/runs/10');
-
-export default class Settings extends Component {
-
+export default class CardItemBordered extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        
-        
-      </View>
+      <Container>
+        <Content padder>
+          <Card>
+            <CardItem header bordered>
+              <Text>NativeBase</Text>
+            </CardItem>
+            <CardItem bordered>
+              <Body>
+                <Text>
+                  NativeBase is a free and open source framework that enable
+                  developers to build
+                  high-quality mobile apps using React Native iOS and Android
+                  apps
+                  with a fusion of ES6.
+                </Text>
+              </Body>
+            </CardItem>
+            <CardItem footer bordered>
+              <Text>GeekyAnts</Text>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ebebeb'
-  }
-});

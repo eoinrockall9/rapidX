@@ -24,7 +24,6 @@ import Warmup from './src/screens/Exercise/Warmup';
 import Motivation from './src/screens/Motivation';
 import Stopwatch from './src/screens/Stopwatch';
 import RecentRuns from './src/screens/RecentRuns';
-import CalendarDate from './src/screens/CalendarDate';
 
 const AppNavigator = createStackNavigator(
   {
@@ -49,7 +48,6 @@ const AppNavigator = createStackNavigator(
     Motivation,
     Stopwatch, 
     RecentRuns,
-    CalendarDate
   },
   {
     initialRouteName: 'Home'

@@ -12,32 +12,42 @@ var yyyy = today.getFullYear();
 today = yyyy + '-' + mm + '-' + dd;
 screenHeight = Math.round(Dimensions.get('window').height);
 
-let itemsRef = db.ref('/dates/2020/2/24');
+console.log(mm);
+
+//let itemsRef = db.ref('/dates/2020/'+ (mm) + '/' + dd);// + yyyy + '2' + dd);
 
 import { db } from '../config';
 
 export default class CalendarScreen extends React.Component {
 
   state = {
-    items: []
+    items: [],
+    itemsRef: '/dates/' + yyyy + '/' + mm + '/' + dd
   };
 
-  setItemsRef(year, month, day) {
-    dating = '/dates/' + year + '/' + month + '/' + day
-    console.log(dating)
-    itemsRef = db.ref(dating)
-  }
-
   functionsCombo(year, month, day) {
-    this.setItemsRef(year, month, day);
-    this.props.navigation.navigate('CalendarDate', {year: year, month: month, day: day});
-  }
+    
+    this.setState({itemsRef: '/dates/' + year + '/' + month + '/' + day})
+    console.log("Items Ref: " + this.state.itemsRef)
+    this.componentDidMount();
+  } 
 
   componentDidMount() {
-    itemsRef.on('value', snapshot => {
-      let data = snapshot.val();
-      let items = Object.values(data);
-      this.setState({ items });
+    db.ref(this.state.itemsRef).on('value', snapshot => {
+      //console.log("Snap" + JSON.stringify(snapshot.val()));
+      let i = 0
+      let items = []
+
+      snapshot.forEach((subSnapshot) => {
+        // var key = Object.keys(snapshot.val())[index]
+        //console.log("Subsnap" + JSON.stringify(subSnapshot.val()))
+        let data = subSnapshot.val()
+        let oneItems = Object.values(data);
+        items.push(oneItems)
+
+      });
+      this.setState({items : items})
+  
     });
   }
 
@@ -78,12 +88,13 @@ export default class CalendarScreen extends React.Component {
 
       <View style={styles.container}>
         
-        {this.state.items.length > 0 ? (
-          <ItemComponent items={this.state.items} />
-        ) : (
-          <Text>No items</Text>
-        )}
-        
+       
+        <Text>{this.state.items[0]}</Text>
+        <Text>{this.state.items[1]}</Text>
+        <Text>{this.state.items[2]}</Text>
+        <Text>{this.state.items[3]}</Text>
+        <Text>{this.state.items[4]}</Text>
+      
       </View>
       </React.Fragment>
     )

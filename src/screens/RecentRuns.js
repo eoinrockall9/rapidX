@@ -11,6 +11,7 @@ let itemsRef = db.ref('/runs/10');
 export default class RecentRuns extends Component {
   state = {
     items: [],
+    items2: [],
     string: ''
     
   };
@@ -21,10 +22,20 @@ export default class RecentRuns extends Component {
 
   componentDidMount() {
     itemsRef.on('value', snapshot => {
-      let data = snapshot.val() ? snapshot.val() : {};
-      let items = Object.values(data);
-      //let items = {...data};
-      this.setState({ items });
+      //console.log("Snap" + JSON.stringify(snapshot.val()));
+      let i = 0
+      let items = []
+
+      snapshot.forEach((subSnapshot) => {
+        // var key = Object.keys(snapshot.val())[index]
+        //console.log("Subsnap" + JSON.stringify(subSnapshot.val()))
+        let data = subSnapshot.val()
+        let oneItems = Object.values(data);
+        items.push(oneItems)
+
+      });
+      this.setState({items : items})
+  
     });
   }
 
@@ -36,7 +47,12 @@ export default class RecentRuns extends Component {
     // {
       return (
       <View>
-        <Text>{(JSON.stringify(this.state.items[2]))}</Text>
+        <Text>Hello</Text>
+        <Text>{this.state.items[0]}</Text>
+        <Text>{this.state.items[1]}</Text>
+        <Text>{this.state.items[2]}</Text>
+        <Text>{this.state.items[3]}</Text>
+        <Text>{this.state.items[4]}</Text>
       </View>
       
       );

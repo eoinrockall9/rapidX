@@ -14,8 +14,6 @@ var yyyy = today.getFullYear();
 today = yyyy + '-' + mm + '-' + dd;
 screenHeight = Math.round(Dimensions.get('window').height);
 
-console.log(mm);
-
 import { db } from '../config';
 
 let addItem = (item, year, month, day) => {

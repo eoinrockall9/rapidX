@@ -10,7 +10,6 @@ let fiveRef = db.ref('/runs/20');
 let itemsRef = db.ref('/runs/10');
 
 export default class Charts extends React.Component {
-
   
   state = {
     items: [],
@@ -41,11 +40,12 @@ export default class Charts extends React.Component {
 
   render() {
 
-    array = []
+    array = [56, 78, 90]
     array = this.state.total
-    single = array[0]
+    //single = JSON.stringify(array[0]);
+    singleInt = parseInt(array[0]);
     
-    console.log(single)
+    console.log(array[0] + " ---: " + singleInt);
     
     return (
       
@@ -55,10 +55,9 @@ export default class Charts extends React.Component {
     <Text>Bezier Line Chart + {this.state.total}</Text>
   <LineChart
     data={{
-      labels: ['January', 'February', 'March', 'April', 'May', 'June'],
       datasets: [
         {
-          data: this.state.total,
+          data: [56, 67, 89, 90]
         },
       ],
     }}

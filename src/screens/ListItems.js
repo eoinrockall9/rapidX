@@ -9,9 +9,16 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Dialog from 'react-native-dialog'
 
 let itemsRef = db.ref('/items');
+let DatesRef = db.ref('/dates/');
 
 let addItem = item => {
   itemsRef.push({
+    name: item
+  });
+};
+
+let addItemCalen = (item, year, month, day) => {
+  db.ref('/dates/' + year + '/' + month + '/' + day).push({
     name: item
   });
 };
@@ -20,7 +27,10 @@ export default class ListItems extends Component {
   state = {
     item: '',
     items: [],
-    dialogVisible: false
+    dialogVisible: false,
+    day: '',
+    month: '',
+    year: ''
   };
 
   showDialog = () => {
@@ -37,9 +47,36 @@ export default class ListItems extends Component {
     });
   };
 
+  handleDay = e => {
+    this.setState({
+      day: e.nativeEvent.text
+    });
+  };
+
+  handleMonth = e => {
+    this.setState({
+      month: e.nativeEvent.text
+    });
+  };
+
+  handleYear = e => {
+    this.setState({
+      year: e.nativeEvent.text
+    });
+  };
+
   handleSubmit = () => {
     addItem(this.state.name);
   };
+
+  handleAdd = () => {
+    addItemCalen(this.state.name, this.state.year, this.state.month, this.state.day)
+  };
+
+  addToCalendar = () => {
+    this.handleAdd();
+    this.handleCancel();
+  }
 
   clearText = () => {
     this.setState({
@@ -58,7 +95,7 @@ export default class ListItems extends Component {
     itemsRef.on('value', snapshot => {
       let data = snapshot.val();
       let items = Object.values(data);
-      let eoin = Object.getOwnPropertySymbols(data)
+      
       
       this.setState({ items });
     });
@@ -68,19 +105,16 @@ export default class ListItems extends Component {
     return (
       <React.Fragment>
       <ScrollView>
-      <View>
-      <TouchableOpacity onPress={this.showDialog}>
-          <Text>Show Dialog</Text>
-        </TouchableOpacity>
+      <View> 
         <Dialog.Container visible={this.state.dialogVisible}>
           <Dialog.Title>Add to your Calendar</Dialog.Title>
           <Dialog.Description>
             Add in a date to add this to your calendar?
           </Dialog.Description>
-          <Dialog.Input style={styles.input}>Day</Dialog.Input>
-          <Dialog.Input label="Month" style={styles.input}/>
-          <Dialog.Input label="Year" style={styles.input}/>
-          <Dialog.Button label="Add" />
+          <Dialog.Input label="Day" onChange={this.handleDay} style={styles.input}/>
+          <Dialog.Input label="Month" onChange={this.handleMonth} style={styles.input}/>
+          <Dialog.Input label="Year" onChange={this.handleYear} style={styles.input}/>
+          <Dialog.Button label="Add" onPress={this.addToCalendar} />
           <Dialog.Button label="Cancel" onPress={this.handleCancel} />
         </Dialog.Container>
       </View>

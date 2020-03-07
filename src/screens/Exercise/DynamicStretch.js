@@ -68,8 +68,7 @@ export default class DynamicStretch extends Component {
           />
         </View>
         <View style={{ flexDirection: "row", flex: 1, position: "absolute", bottom: 0, left: 0, right: 0, justifyContent: 'space-between', padding: 15 }}>
-          <Button onPress={() => this._deckSwiper._root.swipeLeft()}>
-            
+          <Button rounded onPress={() => this._deckSwiper._root.swipeLeft()}>
             <Text>Next</Text>
           </Button>
           

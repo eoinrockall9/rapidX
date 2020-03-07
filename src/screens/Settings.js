@@ -1,21 +1,46 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Button } from 'react-native'
-import { Container, Header, Content, Card, CardItem, Text, Body } from "native-base";
+import { Container, Header, Content, Card, CardItem, Text, Body, Switch } from "native-base";
 import { Rating, AirbnbRating } from 'react-native-elements'
 import email from 'react-native-email'
+import ToggleSwitch from 'toggle-switch-react-native'
 
+let motivationAdd = (boolean) => {
+    db.ref('/motivation/').update({
+      name: boolean
+    });
+};
 
-export default class CardItemBordered extends Component {
+import { db } from '../config';
+
+export default class Settings extends Component {
   
+  state = {
+    isOnDefaultToggleSwitch: true,
+    isOnLargeToggleSwitch: false,
+    isOnBlueToggleSwitch: false
+  };
+
+  onToggle(isOn) {
+    console.log("Changed to " + isOn);
+    this.setState({
+      isOnDefaultToggleSwitch: isOn
+    })
+    
+  }
+
   handleEmail = () => {
     const to = ['tiaan@email.com', 'foo@bar.com'] // string or array of email addresses
     email(to, {
         // Optional additional arguments
-        cc: ['bazzy@moo.com', 'doooo@daaa.com'], // string or array of email addresses
-        bcc: 'mee@mee.com', // string or array of email addresses
         subject: 'Show how to use',
         body: 'Some body right here'
     }).catch(console.error)
+}
+
+pushToggle = () => {
+    motivationAdd(this.state.isOnDefaultToggleSwitch);
+    //console.log(this.state.isOnDefaultToggleSwitch);
 }
   
   render() {
@@ -66,6 +91,29 @@ export default class CardItemBordered extends Component {
               </Body>
             </CardItem>
             <CardItem header bordered>
+              <Text>Motivational</Text>
+            </CardItem>
+            <CardItem bordered>
+              <Body>
+                <Text>
+                  <ToggleSwitch
+                    isOn={this.state.isOnDefaultToggleSwitch}
+                    onColor='green'
+                    offColor='red'
+                    label='Example label'
+                    labelStyle={{color: 'black', fontWeight: '900'}}
+                    size='large'
+                    onToggle={isOnDefaultToggleSwitch => {
+                      this.setState({ isOnDefaultToggleSwitch });
+                      this.onToggle(isOnDefaultToggleSwitch);
+                      this.pushToggle();
+                    }}
+                  />
+                  {console.log(this.state.isOnDefaultToggleSwitch)}
+                </Text>
+              </Body>
+            </CardItem>
+            <CardItem header bordered>
               <Text>Rating</Text>
             </CardItem>
             <CardItem bordered style={styles.rating}>
@@ -76,6 +124,7 @@ export default class CardItemBordered extends Component {
                 defaultRating={3}
                 size={20}
                 style={styles.rating}
+                onPress
                 />
               </Body>
             </CardItem>

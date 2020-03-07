@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native'
 
-
 export default class SignUp extends React.Component {
+
   state = { email: '', password: '', errorMessage: null }
 handleSignUp = () => {
   // TODO: Firebase stuff...
@@ -17,7 +17,7 @@ render() {
             {this.state.errorMessage}
           </Text>}
         <TextInput
-          placeholder="Email"
+          placeholder="Username"
           autoCapitalize="none"
           style={styles.textInput}
           onChangeText={email => this.setState({ email })}

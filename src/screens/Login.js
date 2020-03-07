@@ -20,7 +20,7 @@ export default class Login extends React.Component {
         <TextInput
           style={styles.textInput}
           autoCapitalize="none"
-          placeholder="Email"
+          placeholder="Username"
           onChangeText={email => this.setState({ email })}
           value={this.state.email}
         />

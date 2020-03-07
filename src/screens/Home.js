@@ -1,15 +1,54 @@
 import React, { Component } from 'react';
 import { Button, View, Text, ScrollView, StyleSheet, Dimensions} from 'react-native';
 import { Avatar, Icon } from 'react-native-elements';
+import { WeatherWidget } from 'react-native-weather';
+import { Footer } from 'native-base';
 
 screenHeight = Math.round(Dimensions.get('window').height);
 screenWidth = Math.round(Dimensions.get('window').width);
 
+import { db } from '../config';
+
 export default class Home extends Component {
+
+  state = {
+    motivationRef: '/motivation/',
+    items: [],
+    motivationBool: false
+  }
+
+  componentDidMount() {
+    db.ref(this.state.motivationRef).on('value', snapshot => {
+      let items = []
+
+      snapshot.forEach((subSnapshot) => {
+
+        let data = subSnapshot.val()
+        let oneItems = Object.values(data);
+        items.push(oneItems)
+
+      });
+      length = items.length
+      
+      this.setState({
+        motivationBool: items[length-1]
+      })
+      //this.setState({items : items})
+      console.log(items[length-1])
+    });
+  }
+
   render() {
     return (
+      <React.Fragment>
+      <WeatherWidget
+        api={"2832148a54f9bbae57eaa4ff32350ee9"}
+        lat={"53.268810"}
+        lng={"-8.929030"}
+      />
+
       <ScrollView>
-        <View style={styles.icons}>
+        {/* <View style={styles.icons}>
           <React.Fragment>
             <Avatar rounded size='xlarge'
                 source={{uri:'https://www.pngkey.com/png/detail/202-2022332_formacin-usuario-remota-profile-icon-vector.png', }}
@@ -21,16 +60,16 @@ export default class Home extends Component {
           <React.Fragment>
             <Text>Profile</Text>
           </React.Fragment>
-        </View>
+        </View> */}
 
         <View style={styles.icons}>
           <React.Fragment>
             <View style={styles.innerView}>
             <Avatar rounded size='xlarge'
-                source={{uri:'https://vectorified.com/images/new-item-icon-4.png', }}
-                onPress={() => this.props.navigation.navigate('AddItem')}
+                source={{uri:'https://www.pngkey.com/png/detail/202-2022332_formacin-usuario-remota-profile-icon-vector.png', }}
+                onPress={() => this.props.navigation.navigate('Profile')}
             />
-            <Text>Add to List</Text>
+            <Text>Profile</Text>
             </View>
             <View style={styles.innerView}>
             <Avatar rounded size='xlarge'
@@ -41,12 +80,6 @@ export default class Home extends Component {
             </View>
             </React.Fragment>
         </View>
-        {/* <View style={styles.captions2}>
-          <React.Fragment>
-            <Text>Add to List</Text>
-            <Text>To-Do List</Text>
-          </React.Fragment>
-        </View> */}
 
         <View style={styles.icons}>
           <React.Fragment>
@@ -93,8 +126,8 @@ export default class Home extends Component {
                 onPress={() => this.props.navigation.navigate('Settings')}
             />
             <Avatar rounded size='large'
-                source={{uri:'https://image.shutterstock.com/image-vector/stopwatch-stop-watch-timer-flat-260nw-355549763.jpg', }}
-                onPress={() => this.props.navigation.navigate('Stopwatch')}
+                source={{uri:'https://static.thenounproject.com/png/108494-200.png', }}
+                onPress={() => this.props.navigation.navigate('Stats')}
             />
             <Avatar rounded size='large'
                 source={{uri:'https://vectorified.com/images/quote-icon-png-16.png', }}
@@ -105,12 +138,17 @@ export default class Home extends Component {
         <View style={styles.captions3}>
           <React.Fragment>
             <Text>Settings</Text>
-            <Text>Stopwatch</Text>
-            <Text>Quote</Text>
+            <Text>           Statistics</Text>
+            <Text>   Recent Runs</Text>
           </React.Fragment>
         </View>
 
       </ScrollView>
+
+      <Footer style={{height: this.state.motivationBool ? screenHeight/15 : 0 }}>
+        <Text>Hey</Text>
+      </Footer>
+      </React.Fragment>
     );
   }
 }

@@ -10,11 +10,24 @@ import ItemComponent from '../components/ItemComponent';
 
 import { db } from '../config';
 
-let runsRef = db.ref('/runs/10')
+var today = new Date();
+var dd = String(today.getDate());
+var mm = String(today.getMonth() + 1); //January is 0!
+var yyyy = today.getFullYear();
+var date = dd + "/" + mm + "/" + yyyy
+
+console.log()
 
 let addItem = (item, distance) => {
   db.ref('/runs/' + distance).push({
-    name: item
+    name: item,
+  });
+};
+
+let addRun = (item, distance) => {
+  db.ref('/runs/anyDistance/').push({
+    name: item,
+    distance: distance
   });
 };
 
@@ -37,6 +50,7 @@ export default class Tracker extends Component {
 
   handleSubmit = () => {
     addItem(this.state.name, this.state.distance);
+    addRun(this.state.name, this.state.distance);
   };
 
   functionsCombo = () => {
@@ -54,12 +68,12 @@ export default class Tracker extends Component {
       <View style={styles.main}>
         <Text style={styles.title}>Add Time in minutes</Text>
         <TextInput style={styles.itemInput} onChange={this.handleChange} />
+      </View>
+      <View>
         <TouchableHighlight
           style={styles.button}
           underlayColor="white"
-          onPress={this.functionsCombo}
-          
-        >
+          onPress={this.functionsCombo}>
           <Text style={styles.buttonText}>Add</Text>
         </TouchableHighlight>
       </View>

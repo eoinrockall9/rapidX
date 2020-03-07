@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-
 import Home from './src/screens/Home';
 import AddItem from './src/screens/AddItem';
 import List from './src/screens/ListItems';
@@ -24,6 +23,7 @@ import Warmup from './src/screens/Exercise/Warmup';
 import Motivation from './src/screens/Motivation';
 import Stopwatch from './src/screens/Stopwatch';
 import RecentRuns from './src/screens/RecentRuns';
+import Stats from './src/screens/Stats';
 
 const AppNavigator = createStackNavigator(
   {
@@ -48,6 +48,7 @@ const AppNavigator = createStackNavigator(
     Motivation,
     Stopwatch, 
     RecentRuns,
+    Stats,
   },
   {
     initialRouteName: 'Home'

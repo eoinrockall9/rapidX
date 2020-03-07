@@ -1,15 +1,17 @@
 // Loading.js
 import React from 'react'
-import { Dimensions, View, Text, ActivityIndicator, StyleSheet, TextInput, TouchableHighlight, ScrollView } from 'react-native'
-import { Button } from 'native-base'
+import { Dimensions, View, ActivityIndicator, StyleSheet, TextInput, TouchableHighlight, ScrollView } from 'react-native'
+import { Container, Header, Content, Card, CardItem, Body, Text, Button} from 'native-base'
 import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import Dialog from 'react-native-dialog'
-import ItemComponent from '../components/ItemComponent';
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
+
+var m = String(today.getMonth() + 1)
+var d = String(today.getDate())
 
 today = yyyy + '-' + mm + '-' + dd;
 screenHeight = Math.round(Dimensions.get('window').height);
@@ -26,12 +28,13 @@ export default class CalendarScreen extends React.Component {
 
   state = {
     items: [],
-    itemsRef: '/dates/' + yyyy + '/' + mm + '/' + dd,
+    itemsRef: '/dates/' + yyyy + '/' + m + '/' + d,
     dialogVisible: false,
     message: '',
     day: '',
     month: '',
-    year: ''
+    year: '', 
+    datesRef: 'dates'
   };
 
   handleMessage = e => {
@@ -61,8 +64,9 @@ export default class CalendarScreen extends React.Component {
   functionsCombo(year, month, day) {
     
     this.setState({itemsRef: '/dates/' + year + '/' + month + '/' + day})
-    console.log("Items Ref: " + this.state.itemsRef)
+    // console.log("Items Ref: " + this.state.itemsRef)
     this.componentDidMount();
+    this.damn();
   } 
 
   handleSubmit = () => {
@@ -82,15 +86,35 @@ export default class CalendarScreen extends React.Component {
     this.setState({ dialogVisible: false });
   };
 
+  damn() {
+    db.ref(this.state.datesRef).on('value', snapshot => {
+      let i = 0
+      let items = []
+
+      console.log(db.ref(this.state.datesRef))
+
+      // console.log("Shit could get " + JSON.stringify(Object.values(snapshot.val())));
+
+      // snapshot.forEach((subSnapshot) => {
+
+      //   let data = snapshot.val()
+      //   let oneItems = Object.values(data);
+      //   items.push(oneItems)
+
+      // });
+      // console.log(items[1])
+      //this.setState({items : items})
+  
+    });
+  }
+
   componentDidMount() {
     db.ref(this.state.itemsRef).on('value', snapshot => {
-      //console.log("Snap" + JSON.stringify(snapshot.val()));
       let i = 0
       let items = []
 
       snapshot.forEach((subSnapshot) => {
-        // var key = Object.keys(snapshot.val())[index]
-        //console.log("Subsnap" + JSON.stringify(subSnapshot.val()))
+
         let data = subSnapshot.val()
         let oneItems = Object.values(data);
         items.push(oneItems)
@@ -103,12 +127,14 @@ export default class CalendarScreen extends React.Component {
 
   render() {
 
+    
+
     return (
       <React.Fragment>
       <View style={{height: (screenHeight/2.15)}}>
         <CalendarList
           // Callback which gets executed when visible months change in scroll view. Default = undefined
-          onVisibleMonthsChange={(months) => {console.log('now these months are visible', months);}}
+          // onVisibleMonthsChange={(months) => {console.log('now these months are visible', months);}}
           // Max amount of months allowed to scroll to the past. Default = 50
           pastScrollRange={6}
           // Max amount of months allowed to scroll to the future. Default = 50
@@ -130,17 +156,68 @@ export default class CalendarScreen extends React.Component {
           monthFormat={'MMMM, yyyy'}
           // Handler which gets executed when visible month changes in calendar. Default = undefined
           firstDay={1}
+
+          markedDates={{
+            '2020-03-17': {marked: true},
+            '2020-03-18': {marked: true, dotColor: 'red', activeOpacity: 0},
+            
+          }}
         />
       </View>
 
       <View style={styles.container}>
         
        <ScrollView>
-        <Text>{this.state.items[0]}</Text>
-        <Text>{this.state.items[1]}</Text>
-        <Text>{this.state.items[2]}</Text>
-        <Text>{this.state.items[3]}</Text>
-        <Text>{this.state.items[4]}</Text>
+       <Container>
+        <Content>
+          <Card style={{height: this.state.items[0] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[0]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card style={{height: this.state.items[1] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[1]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card style={{height: this.state.items[2] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[2]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card style={{height: this.state.items[3] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[3]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card style={{height: this.state.items[4] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[4]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
+        
       </ScrollView>
         <Button full style={styles.addButton} onPress={this.showDialog}>
           <Text style={styles.addButtonText}>Add to your Calendar</Text>

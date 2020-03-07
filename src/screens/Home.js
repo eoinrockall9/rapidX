@@ -14,8 +14,10 @@ export default class Home extends Component {
   state = {
     motivationRef: '/motivation/',
     items: [],
-    motivationBool: false
+    motivationBool: true
   }
+
+  
 
   componentDidMount() {
     db.ref(this.state.motivationRef).on('value', snapshot => {
@@ -23,18 +25,19 @@ export default class Home extends Component {
 
       snapshot.forEach((subSnapshot) => {
 
-        let data = subSnapshot.val()
-        let oneItems = Object.values(data);
-        items.push(oneItems)
+        let data = subSnapshot.val();
+        console.log(data);
+        
+        items.push(data);
+        this.motivationBool = data;
+        console.log("Motivation: " + this.motivationBool)
 
       });
       length = items.length
+      console.log(items)
+
       
-      this.setState({
-        motivationBool: items[length-1]
-      })
-      //this.setState({items : items})
-      console.log(items[length-1])
+
     });
   }
 

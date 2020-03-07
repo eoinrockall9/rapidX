@@ -17,7 +17,9 @@ export default class Charts extends React.Component {
     
   };
 
-  componentDidMount() {
+  
+
+  UNSAFE_componentWillMount() {
     itemsRef.on('value', snapshot => {
       let data = snapshot.val();
       let items = Object.values(data);
@@ -38,26 +40,52 @@ export default class Charts extends React.Component {
     });
   }
 
+  sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
+  }
+  
   render() {
 
-    array = [56, 78, 90]
     array = this.state.total
+    console.log(array)
+    hello = []
+
+    for (let i = 0; i < 3; i++)
+    {
+        //single = JSON.stringify(array[i]);
+        singleInt = parseInt(array[i])
+        hello[i] = singleInt
+        //console.log(i + singleInt)
+
+    }
+
     //single = JSON.stringify(array[0]);
-    singleInt = parseInt(array[0]);
-    
-    console.log(array[0] + " ---: " + singleInt);
+    //singleInt = parseInt(array[0]);
+    // console.log("Yes - " + singleInt)
+
+    console.log(hello)
+
+    // console.log(this.state.total)
+    // console.log(this.state.items)
+
+    // hello = [singleInt, 23, 45]
     
     return (
       
       <React.Fragment>
       <View>
         
-    <Text>Bezier Line Chart + {this.state.total}</Text>
+    <Text>Bezier Line Chart + {singleInt}</Text>
   <LineChart
     data={{
       datasets: [
         {
-          data: [56, 67, 89, 90]
+          data: hello
         },
       ],
     }}
@@ -72,7 +100,7 @@ export default class Charts extends React.Component {
       color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
       labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
       style: {
-        borderRadius: 16
+        borderRadius: 8
       },
       propsForDots: {
         r: "6",
@@ -83,7 +111,7 @@ export default class Charts extends React.Component {
     bezier
     style={{
       marginVertical: 8,
-      borderRadius: 16
+      borderRadius: 8
     }}
   />
 </View>

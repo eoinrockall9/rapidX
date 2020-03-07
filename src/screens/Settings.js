@@ -40,7 +40,7 @@ export default class Settings extends Component {
 
 pushToggle = () => {
     motivationAdd(this.state.isOnDefaultToggleSwitch);
-    //console.log(this.state.isOnDefaultToggleSwitch);
+    
 }
   
   render() {

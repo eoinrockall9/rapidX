@@ -20,7 +20,6 @@ import LongDistance from './src/screens/Exercise/Long-Distance';
 import Sprint from './src/screens/Exercise/Sprint';
 import Static from './src/screens/Exercise/StaticStretch';
 import Warmup from './src/screens/Exercise/Warmup';
-import Motivation from './src/screens/Motivation';
 import Stopwatch from './src/screens/Stopwatch';
 import RecentRuns from './src/screens/RecentRuns';
 import Stats from './src/screens/Stats';
@@ -45,7 +44,6 @@ const AppNavigator = createStackNavigator(
     Sprint,
     Static,
     Warmup,
-    Motivation,
     Stopwatch, 
     RecentRuns,
     Stats,

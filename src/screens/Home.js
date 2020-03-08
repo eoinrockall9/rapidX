@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, View, Text, ScrollView, StyleSheet, Dimensions} from 'react-native';
 import { Avatar, Icon } from 'react-native-elements';
-import { WeatherWidget } from 'react-native-weather';
+import { WeatherWidget } from '../components/WeatherWidget'
 import { Footer } from 'native-base';
 
 screenHeight = Math.round(Dimensions.get('window').height);

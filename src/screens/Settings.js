@@ -11,6 +11,12 @@ let motivationAdd = (boolean) => {
     });
 };
 
+let ratingPush = (rating) => {
+  db.ref('/rating/').push({
+    value: rating 
+  });
+}
+
 import { db } from '../config';
 
 export default class Settings extends Component {
@@ -36,6 +42,11 @@ export default class Settings extends Component {
         subject: 'Show how to use',
         body: 'Some body right here'
     }).catch(console.error)
+}
+
+ratingCompleted(rating) {
+  console.log("Rating is: " + rating)
+  ratingPush(rating)
 }
 
 pushToggle = () => {
@@ -124,7 +135,7 @@ pushToggle = () => {
                 defaultRating={3}
                 size={20}
                 style={styles.rating}
-                onPress
+                onFinishRating={this.ratingCompleted}
                 />
               </Body>
             </CardItem>

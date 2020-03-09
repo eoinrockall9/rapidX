@@ -69,14 +69,14 @@ export default class Home extends Component {
           <React.Fragment>
             <View style={styles.innerView}>
             <Avatar rounded size='xlarge'
-                source={{uri:'https://www.pngkey.com/png/detail/202-2022332_formacin-usuario-remota-profile-icon-vector.png', }}
+                source={require('../Pictures/profilepic.png')}
                 onPress={() => this.props.navigation.navigate('Profile')}
             />
             <Text>Profile</Text>
             </View>
             <View style={styles.innerView}>
             <Avatar rounded size='xlarge'
-                source={{uri:'https://p7.hiclipart.com/preview/115/685/301/computer-icons-checklist-icon-design-list-vector.jpg', }}
+                source={require('../Pictures/listitems.png')}
                 onPress={() => this.props.navigation.navigate('List')}
             />
             <Text>To-Do List</Text>
@@ -87,11 +87,11 @@ export default class Home extends Component {
         <View style={styles.icons}>
           <React.Fragment>
             <Avatar rounded size='xlarge'
-                source={{uri:'https://cdn5.vectorstock.com/i/1000x1000/51/09/calendar-icon-vector-22895109.jpg', }}
+                source={require('../Pictures/calendar.png')}
                 onPress={() => this.props.navigation.navigate('CalendarScreen')}
             />
             <Avatar rounded size='xlarge'
-                source={{uri:'https://cdn3.vectorstock.com/i/1000x1000/50/72/black-bar-chart-icon-on-white-background-vector-13695072.jpg', }}
+                source={require('../Pictures/charts.png')}
                 onPress={() => this.props.navigation.navigate('Charts')}
             />
             </React.Fragment>
@@ -106,11 +106,11 @@ export default class Home extends Component {
         <View style={styles.icons}>
           <React.Fragment>
             <Avatar rounded size='xlarge'
-                source={{uri:'https://library.kissclipart.com/20180902/ule/kissclipart-sport-transparent-icon-clipart-computer-icons-runn-06e90f9f46749e50.jpg', }}
+                source={require('../Pictures/exercises.png')}
                 onPress={() => this.props.navigation.navigate('Exercises')}
             />
             <Avatar rounded size='xlarge'
-                source={{uri:'https://image.shutterstock.com/image-vector/distance-icon-illustration-isolated-vector-260nw-563106409.jpg', }}
+                source={require('../Pictures/tracker.png')}
                 onPress={() => this.props.navigation.navigate('Tracker')}
             />
             </React.Fragment>
@@ -125,15 +125,15 @@ export default class Home extends Component {
         <View style={styles.icons}>
           <React.Fragment>
             <Avatar rounded size='large'
-                source={{uri:'https://icons-for-free.com/iconfiles/png/512/edit+gear+options+preferences+setting+settings+icon-1320166551296108865.png', }}
+                source={require('../Pictures/settings.png')}
                 onPress={() => this.props.navigation.navigate('Settings')}
             />
             <Avatar rounded size='large'
-                source={{uri:'https://static.thenounproject.com/png/108494-200.png', }}
+                source={require('../Pictures/stats.png')}
                 onPress={() => this.props.navigation.navigate('Stats')}
             />
             <Avatar rounded size='large'
-                source={{uri:'https://vectorified.com/images/quote-icon-png-16.png', }}
+                source={require('../Pictures/recentruns.png')}
                 onPress={() => this.props.navigation.navigate('RecentRuns')}
             />
             </React.Fragment>

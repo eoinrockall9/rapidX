@@ -14,6 +14,7 @@ var m = String(today.getMonth() + 1)
 var d = String(today.getDate())
 
 today = yyyy + '-' + mm + '-' + dd;
+today2 = "'" + today + "'"
 screenHeight = Math.round(Dimensions.get('window').height);
 
 import { db } from '../config';
@@ -23,6 +24,12 @@ let addItem = (item, year, month, day) => {
     name: item
   });
 };
+
+hey = {
+  '2020-03-08': {marked: true},
+  '2020-03-18': {marked: true, dotColor: 'red', activeOpacity: 0},
+  
+}
 
 export default class CalendarScreen extends React.Component {
 
@@ -91,17 +98,21 @@ export default class CalendarScreen extends React.Component {
       let i = 0
       let items = []
 
-      console.log(db.ref(this.state.datesRef))
+      console.log(db.ref(this.state.itemsRef))
 
       // console.log("Shit could get " + JSON.stringify(Object.values(snapshot.val())));
 
-      // snapshot.forEach((subSnapshot) => {
+      snapshot.forEach((subSnapshot) => {
 
-      //   let data = snapshot.val()
-      //   let oneItems = Object.values(data);
-      //   items.push(oneItems)
+        let data = snapshot.val()
+        console.log("Data: " + JSON.stringify(data))
+        let oneItems = Object.values(data);
+        console.log("One Items: " + JSON.stringify(oneItems))
+        items.push(oneItems)
+        
 
-      // });
+      });
+      console.log("Items: " + JSON.stringify(items))
       // console.log(items[1])
       //this.setState({items : items})
   
@@ -127,10 +138,12 @@ export default class CalendarScreen extends React.Component {
 
   render() {
 
-    
+    this.damn()
+    console.log(today2)
 
     return (
       <React.Fragment>
+      <View><Text>DOUBLE CLICK ON A DATE</Text></View>
       <View style={{height: (screenHeight/2.15)}}>
         <CalendarList
           // Callback which gets executed when visible months change in scroll view. Default = undefined
@@ -157,11 +170,7 @@ export default class CalendarScreen extends React.Component {
           // Handler which gets executed when visible month changes in calendar. Default = undefined
           firstDay={1}
 
-          markedDates={{
-            '2020-03-17': {marked: true},
-            '2020-03-18': {marked: true, dotColor: 'red', activeOpacity: 0},
-            
-          }}
+          markedDates={hey}
         />
       </View>
 

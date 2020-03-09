@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, Button, Dimensions } from 'react-native';
-import { List, ListItem } from 'native-base'
+import { View, Text, StyleSheet, TextInput, Button, Dimensions, ScrollView } from 'react-native';
+import { List, ListItem, Card, CardItem, Body } from 'native-base'
 import ItemComponent from '../components/ItemComponent';
 import PropTypes from 'prop-types';
 
@@ -18,11 +18,11 @@ export default class RecentRuns extends Component {
   };
 
   noVisibility = () => {
-    this.setState({ visible: false})
+    this.setState({ visible: false })
   }
 
   yesVisibility = () => {
-    this.setState({ visible: true})
+    this.setState({ visible: true })
   }
 
   static propTypes = {
@@ -89,19 +89,136 @@ export default class RecentRuns extends Component {
           <Button title="Update" onPress={this.onUpdate}/>
           <Button title="See all runs" onPress={this.onShowAll}/>
         </View>
-
+        <ScrollView>
         <View style={{opacity: this.state.visible ? 100 : 0, height: this.state.visible ? screenHeight : 0}}>       
-          <Text>{this.state.items[0]}k - {this.state.items[1]}</Text>
-          <Text>{this.state.items[2]}k - {this.state.items[3]}</Text>
-          {/* <Text>{this.state.items[4]}</Text> */}
+          <Card style={{height: this.state.items[0] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[0]}k - {this.state.items[1]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+          
+          <Card style={{height: this.state.items[2] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[2]}k - {this.state.items[3]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={{height: this.state.items[4] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[4]}k - {this.state.items[5]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+          
+          <Card style={{height: this.state.items[6] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[6]}k - {this.state.items[7]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={{height: this.state.items[8] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[8]}k - {this.state.items[9]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+          
+          <Card style={{height: this.state.items[10] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[10]}k - {this.state.items[11]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={{height: this.state.items[12] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[12]}k - {this.state.items[13]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+          
+          <Card style={{height: this.state.items[14] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[14]}k - {this.state.items[15]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={{height: this.state.items[16] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[16]}k - {this.state.items[17]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+          
+          <Card style={{height: this.state.items[18] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>{this.state.items[18]}k - {this.state.items[19]}</Text>
+              </Body>
+            </CardItem>
+          </Card>
         </View>
+        </ScrollView>
 
         <View style={{opacity: this.state.visible ? 0 : 100, height: this.state.visible ? 0 : screenHeight}}>       
-          <Text>{this.state.items[0]}</Text>
-          <Text>{this.state.items[1]}</Text>
-          <Text>{this.state.items[2]}</Text>
-          <Text>{this.state.items[3]}</Text>
-          <Text>{this.state.items[4]}</Text>
+        <Card style={{height: this.state.items[0] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[0]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card style={{height: this.state.items[1] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[1]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card style={{height: this.state.items[2] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[2]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card style={{height: this.state.items[3] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[3]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card style={{height: this.state.items[4] == null ? 0 : 50}}>
+            <CardItem>
+              <Body>
+                <Text>
+                  {this.state.items[4]}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
         </View>
       </React.Fragment>
       );

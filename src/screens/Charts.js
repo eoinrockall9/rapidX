@@ -50,31 +50,24 @@ export default class Charts extends React.Component {
   }
   
   render() {
-
+    
+    singleInt = 0
     array = this.state.total
     console.log(array)
+    length = this.state.total.length
     hello = []
 
-    for (let i = 0; i < 3; i++)
+    for (let i = 0; i < length; i++)
     {
-        //single = JSON.stringify(array[i]);
+        
         singleInt = parseInt(array[i])
         hello[i] = singleInt
-        //console.log(i + singleInt)
+        
 
     }
 
-    //single = JSON.stringify(array[0]);
-    //singleInt = parseInt(array[0]);
-    // console.log("Yes - " + singleInt)
-
     console.log(hello)
 
-    // console.log(this.state.total)
-    // console.log(this.state.items)
-
-    // hello = [singleInt, 23, 45]
-    
     return (
       
       <React.Fragment>

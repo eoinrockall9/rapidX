@@ -5,32 +5,32 @@ const cards = [
   {
     text: 'Card One',
     name: 'One',
-    image: require('./img/hamstring-stretch.jpg'),
+    image: require('./img/dynamic/hamstring-stretch.jpg'),
   },
   {
     text: 'Card Two',
     name: 'Two',
-    image: require('./img/forward-leg-swing.jpg'),
+    image: require('./img/dynamic/forward-leg-swing.jpg'),
   },
   {
     text: 'Card Three',
     name: 'Three',
-    image: require('./img/sideway-leg-swings.png'),
+    image: require('./img/dynamic/sideway-leg-swings.png'),
   },
   {
     text: 'Card Four',
     name: 'Four',
-    image: require('./img/quad-stretch.png'),
+    image: require('./img/dynamic/quad-stretch.png'),
   },
   {
     text: 'Card Five',
     name: 'Five',
-    image: require('./img/calf-stretch.gif'),
+    image: require('./img/dynamic/calf-stretch.gif'),
   },
   {
     text: 'Card Six',
     name: 'Six',
-    image: require('./img/glute-stretch.jpg'),
+    image: require('./img/dynamic/glute-stretch.jpg'),
   }
 ];
 export default class DynamicStretch extends Component {

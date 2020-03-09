@@ -15,17 +15,17 @@ const cards = [
   {
     text: 'Card Three',
     name: 'Three',
-    image: require('./img/static/hammyband.jpg'),
+    image: require('./img/static/hammyband.png'),
   },
   {
     text: 'Card Four',
     name: 'Four',
-    image: require('./img/static/hipflexor.jpg'),
+    image: require('./img/static/hipflexor.png'),
   },
   {
     text: 'Card Five',
     name: 'Five',
-    image: require('./img/static/lowerback.jpg'),
+    image: require('./img/static/lowerback.png'),
   },
   
 ];

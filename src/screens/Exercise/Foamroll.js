@@ -3,34 +3,34 @@ import { Image } from 'react-native';
 import { Container, Header, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon, Button } from 'native-base';
 const cards = [
   {
-    text: 'Card One',
+    text: 'Calf',
     name: 'One',
-    image: require('./img/foamroll/calf.jpg'),
+    image: require('./img/foamroll/calf.png'),
   },
   {
-    text: 'Card Two',
+    text: 'Hamstring',
     name: 'Two',
-    image: require('./img/foamroll/hamstring.jpg'),
+    image: require('./img/foamroll/hamstring.png'),
   },
   {
-    text: 'Card Three',
+    text: 'Adductor',
     name: 'Three',
-    image: require('./img/foamroll/adductor.jpg'),
+    image: require('./img/foamroll/adductor.png'),
   },
   {
-    text: 'Card Four',
+    text: 'Quad',
     name: 'Four',
-    image: require('./img/foamroll/quad.jpg'),
+    image: require('./img/foamroll/quad.png'),
   },
   {
-    text: 'Card Five',
+    text: 'Glute',
     name: 'Five',
     image: require('./img/foamroll/glute.jpeg'),
   },
   {
-    text: 'Card Six',
+    text: 'IT Band',
     name: 'Six',
-    image: require('./img/foamroll/itband.jpg'),
+    image: require('./img/foamroll/itband.png'),
   }
 ];
 export default class Foamroll extends Component {

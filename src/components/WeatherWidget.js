@@ -83,7 +83,7 @@ class WeatherWidget extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: -1,
+    flex: -0.25,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     position: 'relative',

@@ -149,7 +149,7 @@ export default class Home extends Component {
       </ScrollView>
 
       <Footer style={{height: this.state.motivationBool ? screenHeight/15 : 0 }}>
-        <Text>Hey</Text>
+        <Text>Motivational Quote</Text>
       </Footer>
       </React.Fragment>
     );

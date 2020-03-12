@@ -55,7 +55,7 @@ export default class Charts extends React.Component {
     array = this.state.total
     console.log(array)
     length = this.state.total.length
-    hello = []
+    hello = [0]
 
     for (let i = 0; i < length; i++)
     {
@@ -65,8 +65,6 @@ export default class Charts extends React.Component {
         
 
     }
-
-    console.log(hello)
 
     return (
       

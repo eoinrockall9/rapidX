@@ -23,6 +23,12 @@ import Warmup from './src/screens/Exercise/Warmup';
 import Stopwatch from './src/screens/Stopwatch';
 import RecentRuns from './src/screens/RecentRuns';
 import Stats from './src/screens/Stats';
+import Provinces from './src/screens/Parkrun/Provinces';
+import Connacht from './src/screens/Parkrun/Provinces/Connacht';
+import Leinster from './src/screens/Parkrun/Provinces/Leinster';
+import Munster from './src/screens/Parkrun/Provinces/Munster';
+import Ulster from './src/screens/Parkrun/Provinces/Ulster';
+import Galway from './src/screens/Parkrun/Provinces/Connacht/Galway/Galway'
 
 const AppNavigator = createStackNavigator(
   {
@@ -47,6 +53,12 @@ const AppNavigator = createStackNavigator(
     Stopwatch, 
     RecentRuns,
     Stats,
+    Provinces,
+    Connacht,
+    Leinster,
+    Munster,
+    Ulster,
+    Galway
   },
   {
     initialRouteName: 'Home'

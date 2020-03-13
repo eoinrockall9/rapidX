@@ -1,0 +1,1532 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "flex": -1,
+        "marginBottom": 12,
+        "marginTop": 12,
+      }
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#999999"
+      hidesWhenStopped={true}
+      size="small"
+    />
+  </View>,
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 5,
+            "paddingTop": 26.68,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "column",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderRadius": 75,
+                "height": 150,
+                "opacity": 1,
+                "width": 150,
+              }
+            }
+          >
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                Object {
+                  "backgroundColor": "#bdbdbd",
+                  "borderRadius": 75,
+                  "flex": 1,
+                  "overflow": "hidden",
+                  "position": "relative",
+                }
+              }
+            >
+              <Image
+                onLoad={[Function]}
+                source={
+                  Object {
+                    "testUri": "../../../src/Pictures/profilepic.png",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": null,
+                      "width": null,
+                    },
+                  ]
+                }
+                testID="RNE__Image"
+                theme={
+                  Object {
+                    "colors": Object {
+                      "disabled": "hsl(208, 8%, 90%)",
+                      "divider": "#bcbbc1",
+                      "error": "#ff190c",
+                      "grey0": "#393e42",
+                      "grey1": "#43484d",
+                      "grey2": "#5e6977",
+                      "grey3": "#86939e",
+                      "grey4": "#bdc6cf",
+                      "grey5": "#e1e8ee",
+                      "greyOutline": "#bbb",
+                      "platform": Object {
+                        "android": Object {
+                          "error": "#f44336",
+                          "primary": "#2196f3",
+                          "secondary": "#9C27B0",
+                          "success": "#4caf50",
+                          "warning": "#ffeb3b",
+                        },
+                        "ios": Object {
+                          "error": "#ff3b30",
+                          "primary": "#007aff",
+                          "secondary": "#5856d6",
+                          "success": "#4cd964",
+                          "warning": "#ffcc00",
+                        },
+                      },
+                      "primary": "#2089dc",
+                      "searchBg": "#303337",
+                      "secondary": "#8F0CE8",
+                      "success": "#52c41a",
+                      "warning": "#faad14",
+                    },
+                  }
+                }
+              />
+              <View
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+                pointerEvents="none"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#bdbdbd",
+                      "flex": 1,
+                      "height": null,
+                      "justifyContent": "center",
+                      "width": null,
+                    }
+                  }
+                  testID="RNE__Image__placeholder"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "height": null,
+                    "width": null,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <Text>
+            Profile
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "column",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderRadius": 75,
+                "height": 150,
+                "opacity": 1,
+                "width": 150,
+              }
+            }
+          >
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                Object {
+                  "backgroundColor": "#bdbdbd",
+                  "borderRadius": 75,
+                  "flex": 1,
+                  "overflow": "hidden",
+                  "position": "relative",
+                }
+              }
+            >
+              <Image
+                onLoad={[Function]}
+                source={
+                  Object {
+                    "testUri": "../../../src/Pictures/listitems.png",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": null,
+                      "width": null,
+                    },
+                  ]
+                }
+                testID="RNE__Image"
+                theme={
+                  Object {
+                    "colors": Object {
+                      "disabled": "hsl(208, 8%, 90%)",
+                      "divider": "#bcbbc1",
+                      "error": "#ff190c",
+                      "grey0": "#393e42",
+                      "grey1": "#43484d",
+                      "grey2": "#5e6977",
+                      "grey3": "#86939e",
+                      "grey4": "#bdc6cf",
+                      "grey5": "#e1e8ee",
+                      "greyOutline": "#bbb",
+                      "platform": Object {
+                        "android": Object {
+                          "error": "#f44336",
+                          "primary": "#2196f3",
+                          "secondary": "#9C27B0",
+                          "success": "#4caf50",
+                          "warning": "#ffeb3b",
+                        },
+                        "ios": Object {
+                          "error": "#ff3b30",
+                          "primary": "#007aff",
+                          "secondary": "#5856d6",
+                          "success": "#4cd964",
+                          "warning": "#ffcc00",
+                        },
+                      },
+                      "primary": "#2089dc",
+                      "searchBg": "#303337",
+                      "secondary": "#8F0CE8",
+                      "success": "#52c41a",
+                      "warning": "#faad14",
+                    },
+                  }
+                }
+              />
+              <View
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+                pointerEvents="none"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#bdbdbd",
+                      "flex": 1,
+                      "height": null,
+                      "justifyContent": "center",
+                      "width": null,
+                    }
+                  }
+                  testID="RNE__Image__placeholder"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "height": null,
+                    "width": null,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <Text>
+            To-Do List
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 5,
+            "paddingTop": 26.68,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderRadius": 75,
+              "height": 150,
+              "opacity": 1,
+              "width": 150,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "backgroundColor": "#bdbdbd",
+                "borderRadius": 75,
+                "flex": 1,
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Object {
+                  "testUri": "../../../src/Pictures/calendar.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": null,
+                    "width": null,
+                  },
+                ]
+              }
+              testID="RNE__Image"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            />
+            <View
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#bdbdbd",
+                    "flex": 1,
+                    "height": null,
+                    "justifyContent": "center",
+                    "width": null,
+                  }
+                }
+                testID="RNE__Image__placeholder"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "height": null,
+                  "width": null,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderRadius": 75,
+              "height": 150,
+              "opacity": 1,
+              "width": 150,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "backgroundColor": "#bdbdbd",
+                "borderRadius": 75,
+                "flex": 1,
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Object {
+                  "testUri": "../../../src/Pictures/charts.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": null,
+                    "width": null,
+                  },
+                ]
+              }
+              testID="RNE__Image"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            />
+            <View
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#bdbdbd",
+                    "flex": 1,
+                    "height": null,
+                    "justifyContent": "center",
+                    "width": null,
+                  }
+                }
+                testID="RNE__Image__placeholder"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "height": null,
+                  "width": null,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 20,
+          }
+        }
+      >
+        <Text>
+          Calendar
+        </Text>
+        <Text>
+          Charts
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 5,
+            "paddingTop": 26.68,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderRadius": 75,
+              "height": 150,
+              "opacity": 1,
+              "width": 150,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "backgroundColor": "#bdbdbd",
+                "borderRadius": 75,
+                "flex": 1,
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Object {
+                  "testUri": "../../../src/Pictures/exercises.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": null,
+                    "width": null,
+                  },
+                ]
+              }
+              testID="RNE__Image"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            />
+            <View
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#bdbdbd",
+                    "flex": 1,
+                    "height": null,
+                    "justifyContent": "center",
+                    "width": null,
+                  }
+                }
+                testID="RNE__Image__placeholder"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "height": null,
+                  "width": null,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderRadius": 75,
+              "height": 150,
+              "opacity": 1,
+              "width": 150,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "backgroundColor": "#bdbdbd",
+                "borderRadius": 75,
+                "flex": 1,
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Object {
+                  "testUri": "../../../src/Pictures/tracker.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": null,
+                    "width": null,
+                  },
+                ]
+              }
+              testID="RNE__Image"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            />
+            <View
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#bdbdbd",
+                    "flex": 1,
+                    "height": null,
+                    "justifyContent": "center",
+                    "width": null,
+                  }
+                }
+                testID="RNE__Image__placeholder"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "height": null,
+                  "width": null,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 20,
+          }
+        }
+      >
+        <Text>
+          Exercises
+        </Text>
+        <Text>
+          Run Tracker
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 5,
+            "paddingTop": 26.68,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderRadius": 37.5,
+              "height": 75,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "backgroundColor": "#bdbdbd",
+                "borderRadius": 37.5,
+                "flex": 1,
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Object {
+                  "testUri": "../../../src/Pictures/settings.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": null,
+                    "width": null,
+                  },
+                ]
+              }
+              testID="RNE__Image"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            />
+            <View
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#bdbdbd",
+                    "flex": 1,
+                    "height": null,
+                    "justifyContent": "center",
+                    "width": null,
+                  }
+                }
+                testID="RNE__Image__placeholder"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "height": null,
+                  "width": null,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderRadius": 37.5,
+              "height": 75,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "backgroundColor": "#bdbdbd",
+                "borderRadius": 37.5,
+                "flex": 1,
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Object {
+                  "testUri": "../../../src/Pictures/stats.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": null,
+                    "width": null,
+                  },
+                ]
+              }
+              testID="RNE__Image"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            />
+            <View
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#bdbdbd",
+                    "flex": 1,
+                    "height": null,
+                    "justifyContent": "center",
+                    "width": null,
+                  }
+                }
+                testID="RNE__Image__placeholder"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "height": null,
+                  "width": null,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderRadius": 37.5,
+              "height": 75,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "backgroundColor": "#bdbdbd",
+                "borderRadius": 37.5,
+                "flex": 1,
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Object {
+                  "testUri": "../../../src/Pictures/recentruns.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": null,
+                    "width": null,
+                  },
+                ]
+              }
+              testID="RNE__Image"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            />
+            <View
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#bdbdbd",
+                    "flex": 1,
+                    "height": null,
+                    "justifyContent": "center",
+                    "width": null,
+                  }
+                }
+                testID="RNE__Image__placeholder"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "height": null,
+                  "width": null,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 20,
+          }
+        }
+      >
+        <Text>
+          Settings
+        </Text>
+        <Text>
+                     Statistics
+        </Text>
+        <Text>
+             Recent Runs
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 5,
+            "paddingTop": 26.68,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderRadius": 37.5,
+              "height": 75,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "backgroundColor": "#bdbdbd",
+                "borderRadius": 37.5,
+                "flex": 1,
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Object {
+                  "testUri": "../../../src/Pictures/settings.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": null,
+                    "width": null,
+                  },
+                ]
+              }
+              testID="RNE__Image"
+              theme={
+                Object {
+                  "colors": Object {
+                    "disabled": "hsl(208, 8%, 90%)",
+                    "divider": "#bcbbc1",
+                    "error": "#ff190c",
+                    "grey0": "#393e42",
+                    "grey1": "#43484d",
+                    "grey2": "#5e6977",
+                    "grey3": "#86939e",
+                    "grey4": "#bdc6cf",
+                    "grey5": "#e1e8ee",
+                    "greyOutline": "#bbb",
+                    "platform": Object {
+                      "android": Object {
+                        "error": "#f44336",
+                        "primary": "#2196f3",
+                        "secondary": "#9C27B0",
+                        "success": "#4caf50",
+                        "warning": "#ffeb3b",
+                      },
+                      "ios": Object {
+                        "error": "#ff3b30",
+                        "primary": "#007aff",
+                        "secondary": "#5856d6",
+                        "success": "#4cd964",
+                        "warning": "#ffcc00",
+                      },
+                    },
+                    "primary": "#2089dc",
+                    "searchBg": "#303337",
+                    "secondary": "#8F0CE8",
+                    "success": "#52c41a",
+                    "warning": "#faad14",
+                  },
+                }
+              }
+            />
+            <View
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#bdbdbd",
+                    "flex": 1,
+                    "height": null,
+                    "justifyContent": "center",
+                    "width": null,
+                  }
+                }
+                testID="RNE__Image__placeholder"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "height": null,
+                  "width": null,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 20,
+          }
+        }
+      >
+        <Text>
+          Park Run
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "borderColor": "#cbcbcb",
+          "borderTopWidth": 0.5,
+          "elevation": 3,
+          "flexDirection": "row",
+          "height": 55,
+          "justifyContent": "center",
+          "left": 0,
+          "paddingBottom": 0,
+          "right": 0,
+        },
+        Object {
+          "height": 88.93333333333334,
+        },
+      ]
+    }
+  >
+    <Text>
+      Motivational Quote
+    </Text>
+  </View>,
+]
+`;

@@ -146,6 +146,20 @@ export default class Home extends Component {
           </React.Fragment>
         </View>
 
+        <View style={styles.icons}>
+          <React.Fragment>
+            <Avatar rounded size='large'
+                source={require('../Pictures/settings.png')}
+                onPress={() => this.props.navigation.navigate('Provinces')}
+            />
+            </React.Fragment>
+        </View>
+        <View style={styles.captions3}>
+          <React.Fragment>
+            <Text>Park Run</Text>
+          </React.Fragment>
+        </View>
+
       </ScrollView>
 
       <Footer style={{height: this.state.motivationBool ? screenHeight/15 : 0 }}>

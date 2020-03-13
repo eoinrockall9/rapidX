@@ -17,8 +17,6 @@ export default class Charts extends React.Component {
     
   };
 
-  
-
   UNSAFE_componentWillMount() {
     itemsRef.on('value', snapshot => {
       let data = snapshot.val();

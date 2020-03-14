@@ -15,12 +15,24 @@ const ParkRunLocation = (props) => {
         <CardItem>
             <Left>
                 <Text>
-                    Elevation - {props.elevation}
+                    Start Time - {props.start}
                 </Text>
             </Left>
             <Right>
                 <Text>
-                    Start Time - {props.start}
+                    Elevation - {props.elevation}
+                </Text>
+            </Right>
+        </CardItem>
+        <CardItem>
+            <Left>
+                <Text>
+                    Male Record - {props.maleRecord}
+                </Text>
+            </Left>
+            <Right>
+                <Text>
+                    Female Record - {props.femaleRecord}
                 </Text>
             </Right>
         </CardItem>

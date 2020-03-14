@@ -11,12 +11,12 @@ export default class Galway extends Component {
         return (
           <Container>
             <Content padder>
-              <ParkRunLocation location="Clonbur" elevation="114 ft" start="9.30am" website='http://google.com'/>
-              <ParkRunLocation location="Coole" elevation="114 ft" start="9.30am" website='http://google.com'/>
-              <ParkRunLocation location="Knocknacarra" elevation="114 ft" start="9.30am" website='http://google.com'/>
-              <ParkRunLocation location="Oranmore" elevation="114 ft" start="9.30am" website='http://google.com'/>
-              <ParkRunLocation location="Oughterard" elevation="114 ft" start="9.30am" website='http://google.com'/>
-              <ParkRunLocation location="Portumna" elevation="114 ft" start="9.30am" website='http://google.com'/>
+              <ParkRunLocation location="Clonbur" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/clonburwoods/'/>
+              <ParkRunLocation location="Coole" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/coole/'/>              
+              <ParkRunLocation location="Knocknacarra" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/knocknacarra/'/>
+              <ParkRunLocation location="Oranmore" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/oranmore/'/>
+              <ParkRunLocation location="Oughterard" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/oughterard/'/>
+              <ParkRunLocation location="Portumna" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/portumna/'/>
             </Content>
           </Container>
         );

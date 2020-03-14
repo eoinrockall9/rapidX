@@ -29,6 +29,10 @@ import Leinster from './src/screens/Parkrun/Provinces/Leinster';
 import Munster from './src/screens/Parkrun/Provinces/Munster';
 import Ulster from './src/screens/Parkrun/Provinces/Ulster';
 import Galway from './src/screens/Parkrun/Provinces/Connacht/Galway/Galway'
+import Leitrim from './src/screens/Parkrun/Provinces/Connacht/Leitrim/Leitrim'
+import Mayo from './src/screens/Parkrun/Provinces/Connacht/Mayo/Mayo'
+import Roscommon from './src/screens/Parkrun/Provinces/Connacht/Roscommon/Roscommon'
+import Sligo from './src/screens/Parkrun/Provinces/Connacht/Sligo/Sligo'
 
 const AppNavigator = createStackNavigator(
   {
@@ -58,7 +62,7 @@ const AppNavigator = createStackNavigator(
     Leinster,
     Munster,
     Ulster,
-    Galway
+    Galway, Leitrim, Mayo, Roscommon, Sligo
   },
   {
     initialRouteName: 'Home'

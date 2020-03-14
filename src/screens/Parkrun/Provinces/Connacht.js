@@ -21,7 +21,7 @@ export default class Connacht extends Component {
               </Card>
               
               <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Leinster')} style={{height: screenHeight/4.8}}>
+                <CardItem button onPress={() => this.props.navigation.navigate('Leitrim')} style={{height: screenHeight/4.8}}>
                   <Body>
                     <Text>
                       Leitrim
@@ -31,7 +31,7 @@ export default class Connacht extends Component {
               </Card>
     
               <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Munster')} style={{height: screenHeight/4.8}}>
+                <CardItem button onPress={() => this.props.navigation.navigate('Mayo')} style={{height: screenHeight/4.8}}>
                   <Body>
                     <Text>
                       Mayo
@@ -41,10 +41,20 @@ export default class Connacht extends Component {
               </Card>
     
               <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Ulster')} style={{height: screenHeight/4.8}}>
+                <CardItem button onPress={() => this.props.navigation.navigate('Roscommon')} style={{height: screenHeight/4.8}}>
                   <Body>
                     <Text>
                       Roscommon
+                    </Text>
+                  </Body>
+                </CardItem>
+              </Card>
+
+              <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Sligo')} style={{height: screenHeight/4.8}}>
+                  <Body>
+                    <Text>
+                      Sligo
                     </Text>
                   </Body>
                 </CardItem>

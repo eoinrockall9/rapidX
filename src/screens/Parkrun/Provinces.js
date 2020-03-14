@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, TouchableHighlight } from 'react-native'
+import { Dimensions, StyleSheet, TouchableHighlight } from 'react-native'
 import { Container, Header, Content, Card, CardItem, Body, Text } from 'native-base';
 
 screenHeight = Math.round(Dimensions.get('window').height);
@@ -11,9 +11,9 @@ export default class CardItemButton extends Component {
       <Container>
         <Content padder>
           <Card>
-            <CardItem button onPress={() => this.props.navigation.navigate('Connacht')} style={{height: screenHeight/4.8}}>
-              <Body>
-                <Text>
+            <CardItem button onPress={() => this.props.navigation.navigate('Connacht')} style={{height: screenHeight/4.9}}>
+              <Body style={styles.province}>
+                <Text style={styles.province}>
                   CONNACHT
                 </Text>
               </Body>
@@ -21,9 +21,9 @@ export default class CardItemButton extends Component {
           </Card>
           
           <Card>
-            <CardItem button onPress={() => this.props.navigation.navigate('Leinster')} style={{height: screenHeight/4.8}}>
-              <Body>
-                <Text>
+            <CardItem button onPress={() => this.props.navigation.navigate('Leinster')} style={{height: screenHeight/4.9}}>
+              <Body style={styles.province}>
+                <Text style={styles.province}>
                   LEINSTER
                 </Text>
               </Body>
@@ -31,9 +31,9 @@ export default class CardItemButton extends Component {
           </Card>
 
           <Card>
-            <CardItem button onPress={() => this.props.navigation.navigate('Munster')} style={{height: screenHeight/4.8}}>
-              <Body>
-                <Text>
+            <CardItem button onPress={() => this.props.navigation.navigate('Munster')} style={{height: screenHeight/4.9}}>
+              <Body style={styles.province}>
+                <Text style={styles.province}>
                   MUNSTER
                 </Text>
               </Body>
@@ -41,9 +41,9 @@ export default class CardItemButton extends Component {
           </Card>
 
           <Card>
-            <CardItem button onPress={() => this.props.navigation.navigate('Ulster')} style={{height: screenHeight/4.8}}>
-              <Body>
-                <Text>
+            <CardItem button onPress={() => this.props.navigation.navigate('Ulster')} style={{height: screenHeight/4.9}}>
+              <Body style={styles.province}>
+                <Text style={styles.province}>
                   ULSTER
                 </Text>
               </Body>
@@ -55,3 +55,17 @@ export default class CardItemButton extends Component {
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+    province: {
+      color: 'red', 
+      textAlign: 'center',
+      justifyContent: 'center',
+      flex: 1,
+      fontWeight: 'bold',
+      paddingLeft: screenWidth/12,
+      fontSize: 30, 
+      fontFamily: "Verdana",
+    }
+});

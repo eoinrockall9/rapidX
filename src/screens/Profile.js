@@ -9,10 +9,12 @@ import { ProfileCard } from '../components/ProfileCard';
 
 import { db } from '../config';
 
+let itemsRef = db.ref('/profile/');
+
 //let profileRef = db.ref('/profile');
 
-let addItem = (item, parameter) => {
-  db.ref('/profile/' + parameter).push({
+let addItem = (item) => {
+  db.ref('/profile/').update({
     name: item
   });
 };
@@ -22,8 +24,11 @@ export default class Profile extends Component {
   state = {
     dialog: '',
     name: '',
+    tempName: '',
     username: '',
-    age: ''
+    tempUsername: '',
+    age: '',
+    tempAge: ''
 
   };
 
@@ -38,13 +43,40 @@ export default class Profile extends Component {
 
   handleChange = e => {
     this.setState({
-      name: e.nativeEvent.text
+      tempName: e.nativeEvent.text
     });
+
+    console.log(this.state.tempName)
   };
 
   handleUpdate = () => {
     this.setState({ dialogVisible: false });
+    this.setState({ name: this.state.tempName})
+    addItem(this.state.tempName)
   };
+
+  UNSAFE_componentWillMount() {
+    itemsRef.on('value', snapshot => {
+      
+      let items = []
+
+      snapshot.forEach((subSnapshot) => {
+        
+        let data = subSnapshot.val()
+        let oneItems = Object.values(data);
+        items.push(oneItems)
+
+      });
+      
+      console.log(items)
+
+      this.setState({ age: items[0]});
+      this.setState({ name: items[1]});
+      this.setState({ username: items[2]});
+
+    });
+    
+  }
 
   render() {
     return (
@@ -88,12 +120,12 @@ export default class Profile extends Component {
             <CardItem button onPress={() => alert("This is Card Body")}>
               <Body>
                 <Text>
-                  Click on any carditem
+                  {this.state.username}
                 </Text>
               </Body>
             </CardItem>
-            <CardItem footer button onPress={() => this.showDialog("Name")}>
-              <Button danger style={styles.updateButton}>
+            <CardItem footer button>
+              <Button danger style={styles.updateButton} onPress={() => this.showDialog("Username")}>
                 <Text>Update</Text>
               </Button>
             </CardItem>
@@ -110,12 +142,12 @@ export default class Profile extends Component {
             <CardItem button onPress={() => alert("This is Card Body")}>
               <Body>
                 <Text>
-                  Click on any carditem
+                  {this.state.age}
                 </Text>
               </Body>
             </CardItem>
-            <CardItem footer button onPress={() => this.showDialog("Name")}>
-              <Button danger style={styles.updateButton}>
+            <CardItem footer button>
+              <Button danger style={styles.updateButton} onPress={() => this.showDialog("Age")}>
                 <Text>Update</Text>
               </Button>
             </CardItem>

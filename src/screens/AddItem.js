@@ -10,7 +10,7 @@ import {
 import { db } from '../config';
 
 let addItem = (item, year, month, day) => {
-  db.ref('/dates/' + year).push({
+  db.ref('/profile/' + year).push({
     name: item
   });
 };

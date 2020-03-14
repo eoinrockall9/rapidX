@@ -49,9 +49,12 @@ ratingCompleted(rating) {
   ratingPush(rating)
 }
 
-pushToggle = () => {
-    motivationAdd(this.state.isOnDefaultToggleSwitch);
-    
+pushToggleFalse = () => {
+  motivationAdd(false);  
+}
+
+pushToggleTrue = () => {
+  motivationAdd(true)
 }
   
   render() {
@@ -65,16 +68,13 @@ pushToggle = () => {
             <CardItem bordered>
               <Body>
                 <Text>
-                  NativeBase is a free and open source framework that enable
-                  developers to build
-                  high-quality mobile apps using React Native iOS and Android
-                  apps
-                  with a fusion of ES6.
+                  rapidX is a fitness application with specific emphasis on running. Allows users to easily track progress through use of charts and statistics.{"\n"}
+                  It was created as part of a Final Year Project for a student in Computer Science in NUI Galway.
                 </Text>
               </Body>
             </CardItem>
             <CardItem header bordered>
-              <Text>How to use</Text>
+              <Text>Features</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
@@ -106,22 +106,8 @@ pushToggle = () => {
             </CardItem>
             <CardItem bordered>
               <Body>
-                <Text>
-                  <ToggleSwitch
-                    isOn={this.state.isOnDefaultToggleSwitch}
-                    onColor='green'
-                    offColor='red'
-                    label='Example label'
-                    labelStyle={{color: 'black', fontWeight: '900'}}
-                    size='large'
-                    onToggle={isOnDefaultToggleSwitch => {
-                      this.setState({ isOnDefaultToggleSwitch });
-                      this.onToggle(isOnDefaultToggleSwitch);
-                      this.pushToggle();
-                    }}
-                  />
-                  {console.log(this.state.isOnDefaultToggleSwitch)}
-                </Text>
+                <Button title="Press me" onPress={this.pushToggleTrue} style={{width: 50}}/>
+                <Button title="Press no" onPress={this.pushToggleFalse} />
               </Body>
             </CardItem>
             <CardItem header bordered>
@@ -149,9 +135,7 @@ pushToggle = () => {
               </View>
               </Body>
             </CardItem>
-            <CardItem footer bordered>
-              <Text>GeekyAnts</Text>
-            </CardItem>
+          
           </Card>
         </Content>
       </Container>

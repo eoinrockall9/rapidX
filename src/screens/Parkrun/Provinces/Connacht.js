@@ -10,8 +10,8 @@ export default class Connacht extends Component {
         return (
           <Container>
             <Content padder>
-              <Card style={{height: screenHeight/4.8}}>
-                <CardItem button onPress={() => this.props.navigation.navigate('Galway')} >
+              <Card >
+                <CardItem button onPress={() => this.props.navigation.navigate('Galway')} style={{backgroundColor: 'white', height: screenHeight/4.8}}>
                   <Body>
                     <Text>
                       Galway

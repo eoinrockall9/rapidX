@@ -14,7 +14,7 @@ export default class Home extends Component {
   state = {
     motivationRef: '/motivation/',
     items: [],
-    motivationBool: true
+    motivationBool: ''
   }
 
   
@@ -33,10 +33,10 @@ export default class Home extends Component {
         console.log("Motivation: " + this.motivationBool)
 
       });
+
+      this.setState({ motivationBool: items[0] })
       length = items.length
       console.log(items)
-
-      
 
     });
   }
@@ -51,19 +51,6 @@ export default class Home extends Component {
       />
 
       <ScrollView>
-        {/* <View style={styles.icons}>
-          <React.Fragment>
-            <Avatar rounded size='xlarge'
-                source={{uri:'https://www.pngkey.com/png/detail/202-2022332_formacin-usuario-remota-profile-icon-vector.png', }}
-                onPress={() => this.props.navigation.navigate('Profile')}
-            />
-            </React.Fragment>
-        </View>
-        <View style={styles.captions1}>
-          <React.Fragment>
-            <Text>Profile</Text>
-          </React.Fragment>
-        </View> */}
 
         <View style={styles.icons}>
           <React.Fragment>

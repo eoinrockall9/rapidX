@@ -11,10 +11,10 @@ export default class Galway extends Component {
         return (
           <Container>
             <Content padder>
-              <ParkRunLocation location="Borrisokane" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/borrisokanetown/'/>
-              <ParkRunLocation location="Clonmel" elevation="230 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/clonmel/'/>              
-              <ParkRunLocation location="Knocknacree" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/knockanacreewoods/'/>
-              <ParkRunLocation location="Templemore" elevation="46 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/templemore/'/>
+              <ParkRunLocation location="Borrisokane" elevation="n/a" start="9.30am" maleRecord="17.51" femaleRecord="20.20" website='https://www.parkrun.ie/borrisokanetown/'/>
+              <ParkRunLocation location="Clonmel" elevation="230 ft" start="9.30am" maleRecord="15.40" femaleRecord="18.24" website='https://www.parkrun.ie/clonmel/'/>              
+              <ParkRunLocation location="Knocknacree" elevation="n/a" start="9.30am" maleRecord="17.23" femaleRecord="20.02" website='https://www.parkrun.ie/knockanacreewoods/'/>
+              <ParkRunLocation location="Templemore" elevation="46 ft" start="9.30am" maleRecord="16.31" femaleRecord="18.41" website='https://www.parkrun.ie/templemore/'/>
             </Content>
           </Container>
         );

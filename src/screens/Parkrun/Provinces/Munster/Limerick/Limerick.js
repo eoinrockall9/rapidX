@@ -11,9 +11,9 @@ export default class Galway extends Component {
         return (
           <Container>
             <Content padder>
-              <ParkRunLocation location="Limerick" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/limerick/'/>
-              <ParkRunLocation location="Mungret" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/mungret/'/>              
-              <ParkRunLocation location="Newcastle West" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/newcastlewest/'/>
+              <ParkRunLocation location="Limerick" elevation="n/a" start="9.30am" maleRecord="16.01" femaleRecord="18.57" website='https://www.parkrun.ie/limerick/'/>
+              <ParkRunLocation location="Mungret" elevation="n/a" start="9.30am" maleRecord="15.58" femaleRecord="18.47" website='https://www.parkrun.ie/mungret/'/>              
+              <ParkRunLocation location="Newcastle West" elevation="n/a" start="9.30am" maleRecord="17.31" femaleRecord="20.00" website='https://www.parkrun.ie/newcastlewest/'/>
             </Content>
           </Container>
         );

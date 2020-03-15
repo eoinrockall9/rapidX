@@ -11,11 +11,11 @@ export default class Mayo extends Component {
         return (
           <Container>
             <Content padder>
-              <ParkRunLocation location="Ballina" elevation="91 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/ballina/'/>
-              <ParkRunLocation location="Castlebar" elevation="98 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/castlebar/'/>
-              <ParkRunLocation location="Claremorris" elevation="65 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/claremorris/'/>
-              <ParkRunLocation location="Erris" elevation="61 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/erris/'/>
-              <ParkRunLocation location="Westport" elevation="115 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/westport/'/>
+              <ParkRunLocation location="Ballina" elevation="91 ft" start="9.30am" maleRecord="16.19" femaleRecord="18.34" website='https://www.parkrun.ie/ballina/'/>
+              <ParkRunLocation location="Castlebar" elevation="98 ft" start="9.30am" maleRecord="16.34" femaleRecord="17.56" website='https://www.parkrun.ie/castlebar/'/>
+              <ParkRunLocation location="Claremorris" elevation="65 ft" start="9.30am" maleRecord="16.34" femaleRecord="18.30" website='https://www.parkrun.ie/claremorris/'/>
+              <ParkRunLocation location="Erris" elevation="61 ft" start="9.30am" maleRecord="15.57" femaleRecord="20.03" website='https://www.parkrun.ie/erris/'/>
+              <ParkRunLocation location="Westport" elevation="115 ft" start="9.30am" maleRecord="15.24" femaleRecord="16.48" website='https://www.parkrun.ie/westport/'/>
             </Content>
           </Container>
         );

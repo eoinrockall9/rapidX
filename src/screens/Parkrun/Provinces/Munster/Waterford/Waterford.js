@@ -11,8 +11,8 @@ export default class Galway extends Component {
         return (
           <Container>
             <Content padder>
-              <ParkRunLocation location="Tramore" elevation="40 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/tramore/'/>
-              <ParkRunLocation location="Waterford Nature" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/waterfordnature/'/>              
+              <ParkRunLocation location="Tramore" elevation="40 ft" start="9.30am" maleRecord="15.40" femaleRecord="18.12" website='https://www.parkrun.ie/tramore/'/>
+              <ParkRunLocation location="Waterford Nature" elevation="n/a" start="9.30am" maleRecord="16.04" femaleRecord="18.26" website='https://www.parkrun.ie/waterfordnature/'/>              
               </Content>
           </Container>
         );

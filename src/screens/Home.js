@@ -7,6 +7,14 @@ import { Footer } from 'native-base';
 screenHeight = Math.round(Dimensions.get('window').height);
 screenWidth = Math.round(Dimensions.get('window').width);
 
+var myArray = [
+  "Apples",
+  "Bananas",
+  "Pears"
+];
+
+var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+
 import { db } from '../config';
 
 export default class Home extends Component {
@@ -136,7 +144,7 @@ export default class Home extends Component {
         <View style={styles.icons}>
           <React.Fragment>
             <Avatar rounded size='large'
-                source={require('../Pictures/settings.png')}
+                source={require('../Pictures/parkrun.jpg')}
                 onPress={() => this.props.navigation.navigate('Provinces')}
             />
             </React.Fragment>
@@ -150,7 +158,7 @@ export default class Home extends Component {
       </ScrollView>
 
       <Footer style={{height: this.state.motivationBool ? screenHeight/15 : 0 }}>
-        <Text>Motivational Quote</Text>
+        <Text>{randomItem}</Text>
       </Footer>
       </React.Fragment>
     );

@@ -11,9 +11,9 @@ export default class Clare extends Component {
         return (
           <Container>
             <Content padder>
-              <ParkRunLocation location="Clarisford" elevation="65 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/clarisford/'/>
-              <ParkRunLocation location="Lees Road" elevation="126 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/leesroad/'/>              
-              <ParkRunLocation location="Vandeleur" elevation="72 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/vandeleur/'/>
+              <ParkRunLocation location="Clarisford" elevation="65 ft" start="9.30am" maleRecord="15.46" femaleRecord="18.06" website='https://www.parkrun.ie/clarisford/'/>
+              <ParkRunLocation location="Lees Road" elevation="126 ft" start="9.30am" maleRecord="15.35" femaleRecord="17.58" website='https://www.parkrun.ie/leesroad/'/>              
+              <ParkRunLocation location="Vandeleur" elevation="72 ft" start="9.30am" maleRecord="17.05" femaleRecord="19.15" website='https://www.parkrun.ie/vandeleur/'/>
             </Content>
           </Container>
         );

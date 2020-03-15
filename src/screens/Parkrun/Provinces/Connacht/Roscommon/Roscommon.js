@@ -11,9 +11,9 @@ export default class Roscommon extends Component {
         return (
           <Container>
             <Content padder>
-            <ParkRunLocation location="Castlerea" elevation="96 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/castlerea/'/>
-            <ParkRunLocation location="Lough Key" elevation="92 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/loughkey/'/>
-            <ParkRunLocation location="Strokestown" elevation="n/a" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/strokestown/'/>
+            <ParkRunLocation location="Castlerea" elevation="96 ft" start="9.30am" maleRecord="17.25" femaleRecord="20.39" website='https://www.parkrun.ie/castlerea/'/>
+            <ParkRunLocation location="Lough Key" elevation="92 ft" start="9.30am" maleRecord="16.17" femaleRecord="19.20" website='https://www.parkrun.ie/loughkey/'/>
+            <ParkRunLocation location="Strokestown" elevation="n/a" start="9.30am" maleRecord="17.56" femaleRecord="19.11" website='https://www.parkrun.ie/strokestown/'/>
 
             </Content>
           </Container>

@@ -11,7 +11,7 @@ export default class Sligo extends Component {
         return (
           <Container>
             <Content padder>
-                <ParkRunLocation location="Sligo" elevation="140 ft" start="9.30am" maleRecord="17.30" femaleRecord="19.49" website='https://www.parkrun.ie/sligo/'/>
+                <ParkRunLocation location="Sligo" elevation="140 ft" start="9.30am" maleRecord="15.24" femaleRecord="17.58" website='https://www.parkrun.ie/sligo/'/>
 
             </Content>
           </Container>

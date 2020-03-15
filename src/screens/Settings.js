@@ -102,12 +102,12 @@ pushToggleTrue = () => {
               </Body>
             </CardItem>
             <CardItem header bordered>
-              <Text>Motivational</Text>
+              <Text>Motivational Quote on Home Page</Text>
             </CardItem>
             <CardItem bordered>
-              <Body>
-                <Button title="Press me" onPress={this.pushToggleTrue} style={{width: 50}}/>
-                <Button title="Press no" onPress={this.pushToggleFalse} />
+              <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                <Button title="Turn On" onPress={this.pushToggleTrue} />
+                <Button title="Turn Off" onPress={this.pushToggleFalse} />
               </Body>
             </CardItem>
             <CardItem header bordered>

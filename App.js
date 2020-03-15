@@ -40,6 +40,9 @@ import Limerick from './src/screens/Parkrun/Provinces/Munster/Limerick/Limerick'
 import Tipperary from './src/screens/Parkrun/Provinces/Munster/Tipperary/Tipperary'
 import Waterford from './src/screens/Parkrun/Provinces/Munster/Waterford/Waterford'
 
+console.disableYellowBox = true;
+
+
 const AppNavigator = createStackNavigator(
   {
     Home,

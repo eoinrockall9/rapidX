@@ -6,7 +6,6 @@ import {
   StyleSheet,
   TextInput
 } from 'react-native';
-import ItemComponent from '../components/ItemComponent';
 
 import { db } from '../config';
 
@@ -18,23 +17,35 @@ var date = dd + "/" + mm + "/" + yyyy
 
 console.log()
 
-let addItem = (item, distance) => {
+let addItem = (item, distance, day, month, year) => {
+  
   db.ref('/runs/' + distance).push({
     name: item,
   });
-};
 
-let addRun = (item, distance) => {
   db.ref('/runs/anyDistance/').push({
     name: item,
     distance: distance
   });
+
+  db.ref('/dates/' + year + '/distance/').push({
+    distance: distance
+  });
+
+  db.ref('/dates/' + year + '/' + month + '/distance/').push({
+    distance: distance
+  });
+
 };
+
 
 export default class Tracker extends Component {
   state = {
     name: '',
     distance: '',
+    day: '',
+    month: '',
+    year: ''
   };
 
   handleChange = e => {
@@ -47,10 +58,25 @@ export default class Tracker extends Component {
       distance: e.nativeEvent.text
     });
   };
+  handleChangeDay = e => {
+    this.setState({
+      day: e.nativeEvent.text
+    });
+  };
+  handleChangeMonth = e => {
+    this.setState({
+      month: e.nativeEvent.text
+    });
+  };
+  handleChangeYear = e => {
+    this.setState({
+      year: e.nativeEvent.text
+    });
+  };
 
   handleSubmit = () => {
-    addItem(this.state.name, this.state.distance);
-    addRun(this.state.name, this.state.distance);
+    addItem(this.state.name, this.state.distance, this.state.day, this.state.month, this.state.year);
+    this.props.navigation.navigate('Home')
   };
 
   functionsCombo = () => {
@@ -60,14 +86,19 @@ export default class Tracker extends Component {
   render() {
     return (
       <React.Fragment>
-      <View style={styles.main}>
-        <Text style={styles.title}>Add Distance in terms of KM</Text>
-        <TextInput style={styles.itemInput} onChange={this.handleChangeDist} />
-        
+      <View style={styles.congrats}>
+        <Text style={styles.congratsTitle}>Congratulations{"\n"}You just completed a run</Text>
+        <Text style={styles.detailsTitle}>{"\n"}Enter the details below</Text>
       </View>
-      <View style={styles.main}>
-        <Text style={styles.title}>Add Time in minutes</Text>
-        <TextInput style={styles.itemInput} onChange={this.handleChange} />
+
+      <View>
+        <TextInput placeholder="Distance (in terms of KM)"style={styles.itemInput} onChange={this.handleChangeDist} />
+        <TextInput placeholder="Time (in minutes)" style={styles.itemInput} onChange={this.handleChange} />
+      </View>
+      <View style={{flexDirection: 'row', justifyContent:'center'}}>
+        <TextInput placeholder="Day" style={styles.dateInput} onChange={this.handleChangeDay} />
+        <TextInput placeholder="Month" style={styles.dateInput} onChange={this.handleChangeMonth} />
+        <TextInput placeholder="Year" style={styles.dateInput} onChange={this.handleChangeYear} />
       </View>
       <View>
         <TouchableHighlight
@@ -84,20 +115,40 @@ export default class Tracker extends Component {
 }
 
 const styles = StyleSheet.create({
-  main: {
+  
+  congrats: {
     flex: 1,
-    padding: 30,
     flexDirection: 'column',
-    justifyContent: 'center',
-    backgroundColor: 'white'
+    paddingTop: 20,
+    backgroundColor: 'white',
+    fontSize: 50
   },
-  title: {
-    marginBottom: 20,
-    fontSize: 25,
+  congratsTitle: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    fontSize: 30,
+    textAlign: 'center'
+  },
+  detailsTitle: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    fontSize: 20,
     textAlign: 'center'
   },
   itemInput: {
     height: 50,
+    padding: 4,
+    marginLeft: 20,
+    marginRight: 20,
+    fontSize: 23,
+    borderWidth: 1,
+    borderColor: 'black',
+    borderRadius: 8,
+    color: 'black'
+  },
+  dateInput: {
+    height: 50,
+    width: 100,
     padding: 4,
     marginRight: 5,
     fontSize: 23,

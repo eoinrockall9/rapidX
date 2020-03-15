@@ -33,6 +33,12 @@ import Leitrim from './src/screens/Parkrun/Provinces/Connacht/Leitrim/Leitrim'
 import Mayo from './src/screens/Parkrun/Provinces/Connacht/Mayo/Mayo'
 import Roscommon from './src/screens/Parkrun/Provinces/Connacht/Roscommon/Roscommon'
 import Sligo from './src/screens/Parkrun/Provinces/Connacht/Sligo/Sligo'
+import Clare from './src/screens/Parkrun/Provinces/Munster/Clare/Clare'
+import Cork from './src/screens/Parkrun/Provinces/Munster/Cork/Cork'
+import Kerry from './src/screens/Parkrun/Provinces/Munster/Kerry/Kerry'
+import Limerick from './src/screens/Parkrun/Provinces/Munster/Limerick/Limerick'
+import Tipperary from './src/screens/Parkrun/Provinces/Munster/Tipperary/Tipperary'
+import Waterford from './src/screens/Parkrun/Provinces/Munster/Waterford/Waterford'
 
 const AppNavigator = createStackNavigator(
   {
@@ -62,7 +68,8 @@ const AppNavigator = createStackNavigator(
     Leinster,
     Munster,
     Ulster,
-    Galway, Leitrim, Mayo, Roscommon, Sligo
+    Galway, Leitrim, Mayo, Roscommon, Sligo,
+    Clare, Cork, Kerry, Limerick, Tipperary, Waterford,
   },
   {
     initialRouteName: 'Home'

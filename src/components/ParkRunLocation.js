@@ -6,41 +6,43 @@ const ParkRunLocation = (props) => {
     return(
         <Card>
         <CardItem>
-          <Body>
+          <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+
             <Text style={styles.locationHeader}>
               {props.location}
             </Text>
+
           </Body>
         </CardItem>
         <CardItem>
-            <Left>
-                <Text>
+            <Body style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <Text style={styles.smallText}>
                     Start Time - {props.start}
                 </Text>
-            </Left>
-            <Right>
-                <Text>
+            
+                <Text style={styles.smallText}>
                     Elevation - {props.elevation}
                 </Text>
-            </Right>
+            </Body>
         </CardItem>
         <CardItem>
-            <Left>
-                <Text>
+            <Body style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <Text style={styles.smallText}>
                     Male Record - {props.maleRecord}
                 </Text>
-            </Left>
-            <Right>
-                <Text>
+            
+                <Text style={styles.smallText}>
                     Female Record - {props.femaleRecord}
                 </Text>
-            </Right>
+            </Body>
         </CardItem>
         <CardItem>
-            <Body>
-                <Text style={{color: 'blue'}} onPress={() => Linking.openURL(props.website)}>
+            <Body style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <Text></Text>
+                <Text style={{color: 'blue', fontSize: 11}} onPress={() => Linking.openURL(props.website)}>
                     For more info, check out their website
                 </Text>
+                <Text></Text>
             </Body>
         </CardItem>
       </Card>
@@ -51,8 +53,16 @@ const styles = StyleSheet.create({
     locationHeader: {
         textAlign: 'center',
         fontWeight: 'bold',
-        paddingLeft: screenWidth/3.15
+        //paddingLeft: screenWidth/3.15
       },
+      locationBody: {
+        marginLeft: 20,
+        marginRight: 20, 
+        justifyContent: 'space-evenly'
+      },
+      smallText: {
+          fontSize: 14
+      }
 });
 
 export { ParkRunLocation }

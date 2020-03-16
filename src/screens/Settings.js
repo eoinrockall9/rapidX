@@ -17,6 +17,12 @@ let ratingPush = (rating) => {
   });
 }
 
+let goalUpdate = (tier, goal) => {
+  db.ref('/goals/' + tier + '/').add({
+    value: goal
+  });
+}
+
 import { db } from '../config';
 
 export default class Settings extends Component {
@@ -56,6 +62,30 @@ pushToggleFalse = () => {
 pushToggleTrue = () => {
   motivationAdd(true)
 }
+
+monthEasy = () => {
+    
+}
+
+monthMiddle = () => {
+  
+}
+
+monthHard = () => {
+  
+}
+
+yearEasy = () => {
+  
+}
+
+yearMedium = () => {
+  
+}
+
+yearHard = () => {
+  
+}
   
   render() {
     return (
@@ -88,17 +118,12 @@ pushToggleTrue = () => {
               </Body>
             </CardItem>
             <CardItem header bordered>
-              <Text>FAQs</Text>
+              <Text>Goals</Text>
             </CardItem>
             <CardItem bordered>
-              <Body>
-                <Text>
-                  NativeBase is a free and open source framework that enable
-                  developers to build
-                  high-quality mobile apps using React Native iOS and Android
-                  apps
-                  with a fusion of ES6.
-                </Text>
+              <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                <Button title="Turn On" onPress={this.monthEasy} />
+                <Button title="Turn Off" onPress={this.pushToggleFalse} />
               </Body>
             </CardItem>
             <CardItem header bordered>

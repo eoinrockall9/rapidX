@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TextInput
 } from 'react-native';
+import { Toast } from 'native-base'
 
 import { db } from '../config';
 
@@ -19,22 +20,31 @@ console.log()
 
 let addItem = (item, distance, day, month, year) => {
   
-  db.ref('/runs/' + distance).push({
-    name: item,
-  });
+  if (!(isNaN(item)) && !(isNaN(distance)) && !(isNaN(day)) && !(isNaN(month)) && !(isNaN(year)))
+  {
+    console.log("Success")
 
-  db.ref('/runs/anyDistance/').push({
-    name: item,
-    distance: distance
-  });
+    db.ref('/runs/' + distance).push({
+      name: item,
+    });
+  
+    db.ref('/runs/anyDistance/').push({
+      name: item,
+      distance: distance
+    });
+  
+    db.ref('/dates/' + year + '/distance/').push({
+      distance: distance
+    });
+  
+    db.ref('/dates/' + year + '/' + month + '/distance/').push({
+      distance: distance
+    });
 
-  db.ref('/dates/' + year + '/distance/').push({
-    distance: distance
-  });
+    this.props.navigation.navigate('Home')
 
-  db.ref('/dates/' + year + '/' + month + '/distance/').push({
-    distance: distance
-  });
+  }
+  
 
 };
 
@@ -76,7 +86,7 @@ export default class Tracker extends Component {
 
   handleSubmit = () => {
     addItem(this.state.name, this.state.distance, this.state.day, this.state.month, this.state.year);
-    this.props.navigation.navigate('Home')
+    
   };
 
   functionsCombo = () => {

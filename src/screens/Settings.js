@@ -63,30 +63,6 @@ pushToggleTrue = () => {
   motivationAdd(true)
 }
 
-monthEasy = () => {
-    
-}
-
-monthMiddle = () => {
-  
-}
-
-monthHard = () => {
-  
-}
-
-yearEasy = () => {
-  
-}
-
-yearMedium = () => {
-  
-}
-
-yearHard = () => {
-  
-}
-  
   render() {
     return (
       <Container>

@@ -41,7 +41,10 @@ export default class Stats extends Component {
         let numb = parseInt(oneItems);
         console.log("Number: " + numb);
 
-        runningTotal = runningTotal + numb;
+        if(!(isNaN(numb)))
+        {
+          runningTotal = runningTotal + numb;
+        }
 
         console.log(runningTotal)
 
@@ -72,8 +75,11 @@ export default class Stats extends Component {
         let numb = parseInt(oneItems);
         console.log("Number: " + numb);
 
-        yearTotal = yearTotal + numb;
-
+        if(!(isNaN(numb)))
+        {
+          yearTotal = yearTotal + numb;
+        }
+        
         console.log("Year: " + yearTotal)
 
         itemsYr.push(oneItems)
@@ -94,7 +100,7 @@ export default class Stats extends Component {
       <Container>
         <React.Fragment>
         <View>
-
+          {console.log(this.state.monthDistance + "-----" + this.state.yearDistance)}
         </View>
 
           <Card style={{height: this.state.monthDistance == null ? 0 : 50}}>
@@ -116,7 +122,9 @@ export default class Stats extends Component {
           <ProgressChart
   data={{
     labels: ["Easy", "Medium", "Hard"], //, "Bike", "Run"], // optional
-    data: [this.state.monthDistance/100, this.state.monthDistance/500, this.state.monthDistance/1000 ]
+    data: [(this.state.monthDistance > 100) ? 1 : this.state.monthDistance/100, 
+      (this.state.monthDistance > 500) ? 1 : this.state.monthDistance/500, 
+      (this.state.monthDistance > 1000) ? 1 : this.state.monthDistance/1000 ]
   }}
   width={screenWidth}
   height={220}
@@ -158,7 +166,9 @@ export default class Stats extends Component {
           <ProgressChart
   data={{
     labels: ["Easy", "Medium", "Hard"], //, "Bike", "Run"], // optional
-    data: [this.state.yearDistance/100, this.state.yearDistance/500, this.state.yearDistance/1000 ]
+    data: [(this.state.yearDistance > 100) ? 1 : this.state.yearDistance/100, 
+      (this.state.yearDistance > 500) ? 1 : this.state.yearDistance/500, 
+      (this.state.yearDistance > 1000) ? 1 : this.state.yearDistance/1000 ]
   }}
   width={screenWidth}
   height={220}

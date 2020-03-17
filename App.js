@@ -42,6 +42,19 @@ import Waterford from './src/screens/Parkrun/Provinces/Munster/Waterford/Waterfo
 import Cavan from './src/screens/Parkrun/Provinces/Ulster/Cavan/Cavan'
 import Donegal from './src/screens/Parkrun/Provinces/Ulster/Donegal/Donegal'
 import Monaghan from './src/screens/Parkrun/Provinces/Ulster/Monaghan/Monaghan'
+import Carlow from './src/screens/Parkrun/Provinces/Leinster/Carlow/Carlow'
+import Dublin from './src/screens/Parkrun/Provinces/Leinster/Dublin/Dublin'
+import Kildare from './src/screens/Parkrun/Provinces/Leinster/Kildare/Kildare'
+import Kilkenny from './src/screens/Parkrun/Provinces/Leinster/Kilkenny/Kilkenny'
+import Laois from './src/screens/Parkrun/Provinces/Leinster/Laois/Laois'
+import Longford from './src/screens/Parkrun/Provinces/Leinster/Longford/Longford'
+import Louth from './src/screens/Parkrun/Provinces/Leinster/Louth/Louth'
+import Meath from './src/screens/Parkrun/Provinces/Leinster/Meath/Meath'
+import Offaly from './src/screens/Parkrun/Provinces/Leinster/Offaly/Offaly'
+import Westmeath from './src/screens/Parkrun/Provinces/Leinster/Westmeath/Westmeath'
+import Wexford from './src/screens/Parkrun/Provinces/Leinster/Wexford/Wexford'
+import Wicklow from './src/screens/Parkrun/Provinces/Leinster/Wicklow/Wicklow'
+
 
 console.disableYellowBox = true;
 
@@ -77,7 +90,7 @@ const AppNavigator = createStackNavigator(
     Galway, Leitrim, Mayo, Roscommon, Sligo,
     Clare, Cork, Kerry, Limerick, Tipperary, Waterford,
     Cavan, Donegal, Monaghan,
-    
+    Carlow, Dublin, Kildare, Kilkenny, Laois, Longford, Louth, Meath, Offaly, Westmeath, Wexford, Wicklow
   },
   {
     initialRouteName: 'Home'

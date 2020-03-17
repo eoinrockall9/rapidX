@@ -10,42 +10,27 @@ export default class Ulster extends Component {
     return (
       <Container>
         <Content>
-          <Card style={{height: screenHeight/4.75}}>
-            <CardItem onPress >
-              <Body>
-                <Text>
-                   //Your text here
-                </Text>
-              </Body>
-            </CardItem>
-          </Card>
-          <Card style={{height: screenHeight/4.75}}>
-            <CardItem>
-              <Body>
-                <Text>
-                   //Your text here
-                </Text>
-              </Body>
-            </CardItem>
-          </Card>
-          <Card style={{height: screenHeight/4.75}}>
-            <CardItem>
-              <Body>
-                <Text>
-                   //Your text here
-                </Text>
-              </Body>
-            </CardItem>
-          </Card>
-          <Card style={{height: screenHeight/4.75}}>
-            <CardItem>
-              <Body>
-                <Text>
-                   //Your text here
-                </Text>
-              </Body>
-            </CardItem>
-          </Card>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Cavan')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Cavan</Text>
+                    </Body>
+                </CardItem>
+            </Card>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Donegal')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Donegal</Text>
+                    </Body>
+                </CardItem>
+            </Card>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Monaghan')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Monaghan</Text>
+                    </Body>
+                </CardItem>
+            </Card>
         </Content>
       </Container>
     );

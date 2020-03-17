@@ -39,6 +39,9 @@ import Kerry from './src/screens/Parkrun/Provinces/Munster/Kerry/Kerry'
 import Limerick from './src/screens/Parkrun/Provinces/Munster/Limerick/Limerick'
 import Tipperary from './src/screens/Parkrun/Provinces/Munster/Tipperary/Tipperary'
 import Waterford from './src/screens/Parkrun/Provinces/Munster/Waterford/Waterford'
+import Cavan from './src/screens/Parkrun/Provinces/Ulster/Cavan/Cavan'
+import Donegal from './src/screens/Parkrun/Provinces/Ulster/Donegal/Donegal'
+import Monaghan from './src/screens/Parkrun/Provinces/Ulster/Monaghan/Monaghan'
 
 console.disableYellowBox = true;
 
@@ -73,6 +76,8 @@ const AppNavigator = createStackNavigator(
     Ulster,
     Galway, Leitrim, Mayo, Roscommon, Sligo,
     Clare, Cork, Kerry, Limerick, Tipperary, Waterford,
+    Cavan, Donegal, Monaghan,
+    
   },
   {
     initialRouteName: 'Home'

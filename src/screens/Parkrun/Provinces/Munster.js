@@ -10,65 +10,53 @@ export default class Connacht extends Component {
         return (
           <Container>
             <Content padder>
-              <Card >
-                <CardItem button onPress={() => this.props.navigation.navigate('Clare')} style={{backgroundColor: 'white', height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Clare
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Clare')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Clare</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
               
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Cork')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Cork
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Cork')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Cork</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
     
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Kerry')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Kerry
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Kerry')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Kerry</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
 
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Limerick')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Limerick
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Limerick')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Limerick</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
     
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Tipperary')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Tipperary
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Tipperary')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Tipperary</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
 
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Waterford')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Waterford
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Waterford')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Waterford</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
     
             </Content>
           </Container>

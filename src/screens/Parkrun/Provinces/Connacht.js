@@ -10,55 +10,45 @@ export default class Connacht extends Component {
         return (
           <Container>
             <Content padder>
-              <Card >
-                <CardItem button onPress={() => this.props.navigation.navigate('Galway')} style={{backgroundColor: 'white', height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Galway
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Galway')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Galway</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
               
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Leitrim')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Leitrim
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Leitrim')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Leitrim</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
     
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Mayo')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Mayo
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Mayo')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Mayo</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
     
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Roscommon')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Roscommon
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Roscommon')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Roscommon</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
 
-              <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Sligo')} style={{height: screenHeight/4.8}}>
-                  <Body>
-                    <Text>
-                      Sligo
-                    </Text>
-                  </Body>
+            <Card>
+                <CardItem button onPress={() => this.props.navigation.navigate('Sligo')} style={{height: screenHeight/4.9}}>
+                    <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                        <Text>Sligo</Text>
+                    </Body>
                 </CardItem>
-              </Card>
+            </Card>
     
             </Content>
           </Container>

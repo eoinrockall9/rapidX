@@ -17,9 +17,9 @@ let ratingPush = (rating) => {
   });
 }
 
-let goalUpdate = (tier, goal) => {
-  db.ref('/goals/' + tier + '/').add({
-    value: goal
+let usernameUpdate = (boolean) => {
+  db.ref('/usernameAppear/').update({
+    value: boolean
   });
 }
 
@@ -32,14 +32,6 @@ export default class Settings extends Component {
     isOnLargeToggleSwitch: false,
     isOnBlueToggleSwitch: false
   };
-
-  onToggle(isOn) {
-    console.log("Changed to " + isOn);
-    this.setState({
-      isOnDefaultToggleSwitch: isOn
-    })
-    
-  }
 
   handleEmail = () => {
     const to = ['tiaan@email.com', 'foo@bar.com'] // string or array of email addresses
@@ -61,6 +53,14 @@ pushToggleFalse = () => {
 
 pushToggleTrue = () => {
   motivationAdd(true)
+}
+
+userToggleFalse = () => {
+  usernameUpdate(false);  
+}
+
+userToggleTrue = () => {
+  usernameUpdate(true)
 }
 
   render() {
@@ -85,21 +85,25 @@ pushToggleTrue = () => {
             <CardItem bordered>
               <Body>
                 <Text>
-                  NativeBase is a free and open source framework that enable
-                  developers to build
-                  high-quality mobile apps using React Native iOS and Android
-                  apps
-                  with a fusion of ES6.
+                  
                 </Text>
               </Body>
             </CardItem>
             <CardItem header bordered>
-              <Text>Goals</Text>
+              
+            
+              <Body style={{flexDirection: 'row'}}>
+                <Button title="Update Username" onPress={() => this.props.navigation.navigate('Profile')} />
+                
+              </Body>
+            </CardItem>
+            <CardItem header bordered>
+              <Text>Welcome Message on Home Page</Text>
             </CardItem>
             <CardItem bordered>
               <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-                <Button title="Turn On" onPress={this.monthEasy} />
-                <Button title="Turn Off" onPress={this.pushToggleFalse} />
+                <Button title="Turn On" onPress={this.userToggleTrue} />
+                <Button title="Turn Off" onPress={this.userToggleFalse} />
               </Body>
             </CardItem>
             <CardItem header bordered>

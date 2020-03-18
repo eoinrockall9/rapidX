@@ -11,7 +11,7 @@ export default class Leinster extends Component {
       <Container>
         <Content>
             <Card>
-                <CardItem button onPress={() => this.props.navigation.navigate('Galway')} style={{height: screenHeight/4.9}}>
+                <CardItem button onPress={() => this.props.navigation.navigate('Carlow')} style={{height: screenHeight/4.9}}>
                     <Body style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
                         <Text>Carlow</Text>
                     </Body>

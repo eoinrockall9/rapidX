@@ -21,13 +21,38 @@ export default class Home extends Component {
 
   state = {
     motivationRef: '/motivation/',
+    usernameRef: '/profile/',
+    welcomeRef: '/usernameAppear/',
     items: [],
-    motivationBool: ''
+    motivationBool: '',
+    username: '',
+    usernameBool: ''   
   }
 
   
 
   componentDidMount() {
+    
+    db.ref(this.state.welcomeRef).on('value', snapshot => {
+      let items = []
+
+      snapshot.forEach((subSnapshot) => {
+
+        let data = subSnapshot.val();
+        console.log(data);
+        
+        items.push(data);
+        this.usernameBool = data;
+        console.log("Welcome: " + this.usernameBool)
+
+      });
+
+      this.setState({ usernameBool: items[0] })
+      length = items.length
+      console.log(items)
+
+    });
+
     db.ref(this.state.motivationRef).on('value', snapshot => {
       let items = []
 
@@ -47,6 +72,27 @@ export default class Home extends Component {
       console.log(items)
 
     });
+
+
+    db.ref(this.state.usernameRef).on('value', snapshot => {
+      let items = []
+
+      snapshot.forEach((subSnapshot) => {
+
+        let data = subSnapshot.val();
+        console.log(data);
+        
+        items.push(data);
+        this.username = data;
+        console.log("Motivation: " + this.username)
+
+      });
+
+      this.setState({ username: this.username })
+      length = items.length
+      
+
+    });
   }
 
   render() {
@@ -60,14 +106,19 @@ export default class Home extends Component {
 
       <ScrollView>
 
+      <View style={{height: this.state.usernameBool ? screenHeight/13 : 0 }}>
+        <Text style={styles.welcomeText}>Hello {this.state.username}</Text>
+        <Text style={styles.welcomeText}>Welcome to rapidX</Text>
+      </View>
+
         <View style={styles.icons}>
           <React.Fragment>
             <View style={styles.innerView}>
             <Avatar rounded size='xlarge'
-                source={require('../Pictures/profilepic.png')}
-                onPress={() => this.props.navigation.navigate('Profile')}
+                source={require('../Pictures/parkrun.jpg')}
+                onPress={() => this.props.navigation.navigate('Provinces')}
             />
-            <Text>Profile</Text>
+            <Text>Park Run</Text>
             </View>
             <View style={styles.innerView}>
             <Avatar rounded size='xlarge'
@@ -141,20 +192,6 @@ export default class Home extends Component {
           </React.Fragment>
         </View>
 
-        <View style={styles.icons}>
-          <React.Fragment>
-            <Avatar rounded size='large'
-                source={require('../Pictures/parkrun.jpg')}
-                onPress={() => this.props.navigation.navigate('Provinces')}
-            />
-            </React.Fragment>
-        </View>
-        <View style={styles.captions3}>
-          <React.Fragment>
-            <Text>Park Run</Text>
-          </React.Fragment>
-        </View>
-
       </ScrollView>
 
       <Footer style={{height: this.state.motivationBool ? screenHeight/15 : 0 }}>
@@ -190,5 +227,9 @@ const styles = StyleSheet.create ({
   innerView: {
     flexDirection: 'column',
     
+  },
+  welcomeText: {
+    textAlign: 'center',
+    paddingTop: 10
   }
 });

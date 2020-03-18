@@ -15,7 +15,7 @@ let itemsRef = db.ref('/profile/');
 
 let addItem = (item) => {
   db.ref('/profile/').update({
-    name: item
+    username: item
   });
 };
 
@@ -51,7 +51,7 @@ export default class Profile extends Component {
 
   handleUpdate = () => {
     this.setState({ dialogVisible: false });
-    this.setState({ name: this.state.tempName})
+    this.setState({ username: this.state.tempName})
     addItem(this.state.tempName)
   };
 
@@ -70,9 +70,7 @@ export default class Profile extends Component {
       
       console.log(items)
 
-      this.setState({ age: items[0]});
-      this.setState({ name: items[1]});
-      this.setState({ username: items[2]});
+      this.setState({ username: items[0]});
 
     });
     
@@ -92,25 +90,7 @@ export default class Profile extends Component {
 
 
           <View style={styles.textContainer}>
-          <Card transparent>
-            <CardItem header button onPress={() => alert("This is Card Header")}>
-              <Text>Name:</Text>
-            </CardItem>
-            <CardItem>
-              <Body>
-                <Text>
-                  {this.state.name}
-                </Text>
-              </Body>
-            </CardItem>
-            <CardItem footer >
-              <Button danger onPress={() => this.showDialog("Name")} style={styles.updateButton}>
-                <Text>Update</Text>
-              </Button>
-            </CardItem>
-            
-          </Card>
-
+          
 
           
           <Card transparent>
@@ -135,24 +115,7 @@ export default class Profile extends Component {
 
 
           
-          <Card transparent>
-            <CardItem header button onPress={() => alert("This is Card Header")}>
-              <Text>Age:</Text>
-            </CardItem>
-            <CardItem button onPress={() => alert("This is Card Body")}>
-              <Body>
-                <Text>
-                  {this.state.age}
-                </Text>
-              </Body>
-            </CardItem>
-            <CardItem footer button>
-              <Button danger style={styles.updateButton} onPress={() => this.showDialog("Age")}>
-                <Text>Update</Text>
-              </Button>
-            </CardItem>
-            
-          </Card>                    
+                           
             
 
           <Dialog.Container visible={this.state.dialogVisible}>

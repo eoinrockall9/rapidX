@@ -94,10 +94,17 @@ export default class ListItems extends Component {
   componentDidMount() {
     itemsRef.on('value', snapshot => {
       let data = snapshot.val();
-      let items = Object.values(data);
+      if (data == null)
+      {
+        console.log("No items")
+        this.setState({ items: []})
+      }
+      else {
+        let items = Object.values(data);
+        this.setState({ items });
+      }
       
-      
-      this.setState({ items });
+      //this.setState({ items });
     });
   }
 

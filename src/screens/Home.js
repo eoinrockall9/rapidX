@@ -7,13 +7,13 @@ import { Footer } from 'native-base';
 screenHeight = Math.round(Dimensions.get('window').height);
 screenWidth = Math.round(Dimensions.get('window').width);
 
-var myArray = [
+var motivationalQuotes = [
   "Apples",
   "Bananas",
   "Pears"
 ];
 
-var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+var randomItem = motivationalQuotes[Math.floor(Math.random()*motivationalQuotes.length)];
 
 import { db } from '../config';
 
@@ -106,7 +106,7 @@ export default class Home extends Component {
 
       <ScrollView>
 
-      <View style={{height: this.state.usernameBool ? screenHeight/13 : 0 }}>
+      <View style={{height: this.state.usernameBool ? 50 : 0 , opacity: this.state.usernameBool ? 1 : 0}}>
         <Text style={styles.welcomeText}>Hello {this.state.username}</Text>
         <Text style={styles.welcomeText}>Welcome to rapidX</Text>
       </View>
@@ -193,8 +193,8 @@ export default class Home extends Component {
         </View>
 
       </ScrollView>
-
-      <Footer style={{height: this.state.motivationBool ? screenHeight/15 : 0 }}>
+      {console.log("This is the valye of the motivationalBool: " + this.state.motivationBool)}
+      <Footer style={{backgroundColor: 'white', height: this.state.motivationBool ? screenHeight/15 : 0 }} >
         <Text>{randomItem}</Text>
       </Footer>
       </React.Fragment>
@@ -231,5 +231,8 @@ const styles = StyleSheet.create ({
   welcomeText: {
     textAlign: 'center',
     paddingTop: 10
+  }, 
+  footer: {
+    backgroundColor: 'white'
   }
 });

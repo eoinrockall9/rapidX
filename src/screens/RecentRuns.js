@@ -95,7 +95,7 @@ export default class RecentRuns extends Component {
         </View>
         <ScrollView>
         <View style={{opacity: this.state.visible ? 100 : 0, height: this.state.visible ? screenHeight : 0}}>       
-          <Card style={{height: this.state.items[0] == null ? 0 : 50}}>
+          <Card style={{height: this.state.items[this.state.itemsLength-2] == null ? 0 : 50}}>
             <CardItem>
               <Body>
                 <Text>{this.state.items[this.state.itemsLength-2]}k - {this.state.items[this.state.itemsLength-1]}</Text>
@@ -103,10 +103,10 @@ export default class RecentRuns extends Component {
             </CardItem>
           </Card>
           
-          <Card style={{height: this.state.items[2] == null ? 0 : 50}}>
+          <Card style={{height: this.state.items[this.state.itemsLength-2] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-                <Text>{this.state.items[this.state.itemsLength-2]}k - {this.state.items[this.state.itemsLength-3]}</Text>
+                <Text>{this.state.items[this.state.itemsLength-4]}k - {this.state.items[this.state.itemsLength-3]}</Text>
               </Body>
             </CardItem>
           </Card>
@@ -114,7 +114,7 @@ export default class RecentRuns extends Component {
           <Card style={{height: this.state.items[4] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-              <Text>{this.state.items[this.state.itemsLength-4]}k - {this.state.items[this.state.itemsLength-5]}</Text>
+              <Text>{this.state.items[this.state.itemsLength-6]}k - {this.state.items[this.state.itemsLength-5]}</Text>
               </Body>
             </CardItem>
           </Card>
@@ -122,7 +122,7 @@ export default class RecentRuns extends Component {
           <Card style={{height: this.state.items[6] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-              <Text>{this.state.items[this.state.itemsLength-6]}k - {this.state.items[this.state.itemsLength-7]}</Text>
+              <Text>{this.state.items[this.state.itemsLength-8]}k - {this.state.items[this.state.itemsLength-7]}</Text>
               </Body>
             </CardItem>
           </Card>
@@ -130,7 +130,7 @@ export default class RecentRuns extends Component {
           <Card style={{height: this.state.items[8] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-              <Text>{this.state.items[this.state.itemsLength-8]}k - {this.state.items[this.state.itemsLength-9]}</Text>
+              <Text>{this.state.items[this.state.itemsLength-10]}k - {this.state.items[this.state.itemsLength-9]}</Text>
               </Body>
             </CardItem>
           </Card>
@@ -138,7 +138,7 @@ export default class RecentRuns extends Component {
           <Card style={{height: this.state.items[10] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-              <Text>{this.state.items[this.state.itemsLength-10]}k - {this.state.items[this.state.itemsLength-11]}</Text>
+              <Text>{this.state.items[this.state.itemsLength-12]}k - {this.state.items[this.state.itemsLength-11]}</Text>
               </Body>
             </CardItem>
           </Card>
@@ -146,7 +146,7 @@ export default class RecentRuns extends Component {
           <Card style={{height: this.state.items[12] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-              <Text>{this.state.items[this.state.itemsLength-12]}k - {this.state.items[this.state.itemsLength-13]}</Text>
+              <Text>{this.state.items[this.state.itemsLength-14]}k - {this.state.items[this.state.itemsLength-13]}</Text>
               </Body>
             </CardItem>
           </Card>
@@ -154,7 +154,7 @@ export default class RecentRuns extends Component {
           <Card style={{height: this.state.items[14] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-              <Text>{this.state.items[this.state.itemsLength-14]}k - {this.state.items[this.state.itemsLength-15]}</Text>
+              <Text>{this.state.items[this.state.itemsLength-16]}k - {this.state.items[this.state.itemsLength-15]}</Text>
               </Body>
             </CardItem>
           </Card>
@@ -162,7 +162,7 @@ export default class RecentRuns extends Component {
           <Card style={{height: this.state.items[16] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-              <Text>{this.state.items[this.state.itemsLength-16]}k - {this.state.items[this.state.itemsLength-17]}</Text>
+              <Text>{this.state.items[this.state.itemsLength-18]}k - {this.state.items[this.state.itemsLength-17]}</Text>
               </Body>
             </CardItem>
           </Card>
@@ -170,7 +170,7 @@ export default class RecentRuns extends Component {
           <Card style={{height: this.state.items[18] == null ? 0 : 50}}>
             <CardItem>
               <Body>
-              <Text>{this.state.items[this.state.itemsLength-18]}k - {this.state.items[this.state.itemsLength-19]}</Text>
+              <Text>{this.state.items[this.state.itemsLength-20]}k - {this.state.items[this.state.itemsLength-19]}</Text>
               </Body>
             </CardItem>
           </Card>

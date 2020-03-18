@@ -93,7 +93,7 @@ const AppNavigator = createStackNavigator(
     Carlow, Dublin, Kildare, Kilkenny, Laois, Longford, Louth, Meath, Offaly, Westmeath, Wexford, Wicklow
   },
   {
-    initialRouteName: 'Home'
+    initialRouteName: 'Loading'
   }
 );
 

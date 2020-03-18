@@ -34,11 +34,11 @@ export default class Settings extends Component {
   };
 
   handleEmail = () => {
-    const to = ['tiaan@email.com', 'foo@bar.com'] // string or array of email addresses
+    const to = ['e.rockall9@gmail.com'] // string or array of email addresses
     email(to, {
         // Optional additional arguments
-        subject: 'Show how to use',
-        body: 'Some body right here'
+        subject: 'Subject: ',
+        body: ''
     }).catch(console.error)
 }
 
@@ -74,7 +74,7 @@ userToggleTrue = () => {
             <CardItem bordered>
               <Body>
                 <Text>
-                  rapidX is a fitness application with specific emphasis on running. Allows users to easily track progress through use of charts and statistics.{"\n"}
+                  rapidX is a running companion application. Allows users to easily track progress through use of charts and statistics, while also providing features for all levels of experience.{"\n"}
                   It was created as part of a Final Year Project for a student in Computer Science in NUI Galway.
                 </Text>
               </Body>
@@ -84,8 +84,12 @@ userToggleTrue = () => {
             </CardItem>
             <CardItem bordered>
               <Body>
-                <Text>
-                  
+                <Text style={{fontSize: 12}}>
+                • Calendar: to plan out your days, weeks and months ahead{"\n"}
+                • Charts: to track progress{"\n"}
+                • Stats: Set monthly and yearly goals{"\n"}
+                • Parkrun: Keep up to date with local park runs{"\n"}
+                • Information: Become more educated about the sport of running
                 </Text>
               </Body>
             </CardItem>

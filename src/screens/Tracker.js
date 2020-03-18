@@ -41,7 +41,7 @@ let addItem = (item, distance, day, month, year) => {
       distance: distance
     });
 
-    this.props.navigation.navigate('Home')
+    
 
   }
   
@@ -86,7 +86,7 @@ export default class Tracker extends Component {
 
   handleSubmit = () => {
     addItem(this.state.name, this.state.distance, this.state.day, this.state.month, this.state.year);
-    
+    this.props.navigation.navigate('Home')
   };
 
   functionsCombo = () => {

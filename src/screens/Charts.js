@@ -4,10 +4,6 @@ import { Dimensions, ScrollView, View, Text, ActivityIndicator, StyleSheet } fro
 import { LineChart } from 'react-native-chart-kit';
 
 import { db } from '../config';
-import { Button } from 'native-base';
-
-let fiveRef = db.ref('/runs/20');
-let itemsRef = db.ref('/runs/10');
 
 export default class Charts extends React.Component {
   

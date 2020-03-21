@@ -153,7 +153,7 @@ export default class Home extends Component {
           <React.Fragment>
             <Avatar rounded size='xlarge'
                 source={require('../Pictures/exercises.png')}
-                onPress={() => this.props.navigation.navigate('AddItem')}
+                onPress={() => this.props.navigation.navigate('Exercises')}
             />
             <Avatar rounded size='xlarge'
                 source={require('../Pictures/tracker.png')}

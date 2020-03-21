@@ -5,7 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Home from './src/screens/Home';
 import AddItem from './src/screens/AddItem';
 import List from './src/screens/ListItems';
-import Loading from './src/screens/Loading';
+import rapidx from './src/screens/rapidx';
 import SignUp from './src/screens/SignUp';
 import Login from './src/screens/Login';
 import Tracker from './src/screens/Tracker';
@@ -64,7 +64,7 @@ const AppNavigator = createStackNavigator(
     Home,
     AddItem,
     List,
-    Loading,
+    rapidx,
     SignUp,
     Login,
     Tracker,
@@ -93,7 +93,7 @@ const AppNavigator = createStackNavigator(
     Carlow, Dublin, Kildare, Kilkenny, Laois, Longford, Louth, Meath, Offaly, Westmeath, Wexford, Wicklow
   },
   {
-    initialRouteName: 'Loading'
+    initialRouteName: 'rapidx'
   }
 );
 

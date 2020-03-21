@@ -182,7 +182,7 @@ export default class RecentRuns extends Component {
             <CardItem>
               <Body>
                 <Text>
-                  {this.state.items[0]}
+                  {this.state.items[this.state.items.length-1]}
                 </Text>
               </Body>
             </CardItem>
@@ -191,7 +191,7 @@ export default class RecentRuns extends Component {
             <CardItem>
               <Body>
                 <Text>
-                  {this.state.items[1]}
+                  {this.state.items[this.state.items.length-2]}
                 </Text>
               </Body>
             </CardItem>
@@ -200,7 +200,7 @@ export default class RecentRuns extends Component {
             <CardItem>
               <Body>
                 <Text>
-                  {this.state.items[2]}
+                  {this.state.items[this.state.items.length-3]}
                 </Text>
               </Body>
             </CardItem>
@@ -209,7 +209,7 @@ export default class RecentRuns extends Component {
             <CardItem>
               <Body>
                 <Text>
-                  {this.state.items[3]}
+                  {this.state.items[this.state.items.length-4]}
                 </Text>
               </Body>
             </CardItem>
@@ -218,7 +218,7 @@ export default class RecentRuns extends Component {
             <CardItem>
               <Body>
                 <Text>
-                  {this.state.items[4]}
+                  {this.state.items[this.state.items.length-5]}
                 </Text>
               </Body>
             </CardItem>
